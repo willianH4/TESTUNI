@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/marginPantallasV"
+    android:layout_marginTop="@dimen/marginPantallasV"
+    android:layout_marginRight="@dimen/marginPantallasH"
+    android:layout_marginLeft="@dimen/marginPantallasH"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:id="@+id/imgImagen1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/alturaImagen1"
+                android:src="@drawable/logoedit"
+                android:contentDescription="@string/imgConten1"
+                />
+
+            <ImageView
+                android:id="@+id/imgImagen2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cienDP"
+                android:src="@drawable/logobanco_1"
+                android:contentDescription="@string/imgConten1"
+                />
+
+            <TextView
+                android:id="@+id/tvBienvenido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/treintaSP"
+                android:text="@string/txt_bienvenida"
+                android:textAlignment="center"
+                android:textColor="@color/celeste" />
+
+            <TextView
+                android:id="@+id/tvMensaje1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/txt_mensaje1P1"
+                android:textSize="@dimen/treintaSP"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/veinteDP"
+                android:textColor="@color/azulito" />
+
+            <TextView
+                android:id="@+id/tvMensaje2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/txt_mensaje2P1"
+                android:textSize="@dimen/treintaSP"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/veinteDP"
+                android:textColor="@color/azulito" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btnComenzar"
+                    android:layout_width="@dimen/btnPantalla1"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/veinteDP"
+                    android:text="@string/buttonP1"
+                    android:textColor="@color/white"
+                    android:background="@drawable/boton_comenzar"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

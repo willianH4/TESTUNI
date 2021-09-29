@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/marginPantallasV"
+    android:layout_marginTop="@dimen/marginPantallasV"
+    android:layout_marginRight="@dimen/marginPantallasH"
+    android:layout_marginLeft="@dimen/marginPantallasH"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".EnrollaUni">
+
+        <TextView
+            android:id="@+id/tvMensaje1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/txt_mensaje1P2"
+            android:textSize="@dimen/tvPantalla2"
+            android:layout_marginTop="@dimen/treintaSP"
+            android:textAlignment="center"
+            android:textColor="@color/azulito" />
+
+        <TextView
+            android:id="@+id/tvMensaje2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/txt_mensaje2P2"
+            android:textSize="@dimen/tvPantalla2M2"
+            android:layout_marginTop="@dimen/treintaSP"
+            android:textColor="@color/azulito" />
+
+        <Spinner
+            android:id="@+id/spCuentas"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cuarentayochoDP"
+            android:entries="@array/cuentas"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvMensaje3"
+                android:layout_width="@dimen/trescientosDP"
+                android:layout_marginRight="@dimen/doceDP"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/txt_mensaje3P2"
+                android:textSize="@dimen/tvPantalla2M3"
+                android:layout_marginTop="@dimen/treintaSP"
+                android:textColor="@color/azulito" />
+
+            <ImageButton
+                android:id="@+id/imgInfo"
+                android:layout_width="@dimen/cuarentayochoDP"
+                android:layout_height="@dimen/cuarentayochoDP"
+                android:layout_marginTop="@dimen/diezDP"
+                android:contentDescription="@string/buttonP1"
+                android:src="@mipmap/ic_info"
+                android:textAlignment="textStart"
+                tools:ignore="ImageContrastCheck" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvMensaje4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/txt_mensaje4P2"
+            android:textSize="@dimen/tvPantalla2M2"
+            android:layout_marginTop="@dimen/treintaSP"
+            android:textColor="@color/azulito" />
+
+        <EditText
+            android:id="@+id/etConfirmarTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alturaEditext"
+            android:hint="@string/et_telefono"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:id="@+id/tvMensaje5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/txt_mensaje5P2"
+            android:textSize="@dimen/tvPantalla2M2"
+            android:layout_marginTop="@dimen/diezDP"
+            android:textColor="@color/azulito" />
+
+        <CheckBox android:id="@+id/cbTerminos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textoTerminos"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/checkbox"
+            android:textColor="@color/azulito"
+            android:text="@string/txt_mensaje6P2"
+            />
+
+        <Button
+            android:id="@+id/btnContinuar"
+            android:layout_width="@dimen/btnPantalla2"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/veinteDP"
+            android:text="@string/buttonP2"
+            android:textColor="@color/white"
+            android:background="@drawable/boton_continuar"
+            />
+
+</LinearLayout>

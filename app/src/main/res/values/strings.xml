@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">UNIPAY</string>
+    <string name="txt_bienvenida">Bienvenido a UNIpay</string>
+    <string name="txt_mensaje1P1">Envia y recibe dinero con nuestra app</string>
+    <string name="txt_mensaje2P1">Lorem ipsum dolor asim amet</string>
+    <string name="buttonP1">Comenzar</string>
+    <string name="imgConten1">Transacciones de banco a banco</string>
+
+    <string name="txt_mensaje1P2">Enrolla tu UNIpay</string>
+    <string name="txt_mensaje2P2">Elige tu cuenta</string>
+
+    <string-array name="cuentas">
+        <item>Seleccione una cuenta</item>
+        <item>121647</item>
+        <item>0192383</item>
+        <item>83702</item>
+        <item>02892878</item>
+        <item>928019</item>
+        <item>918200</item>
+    </string-array>
+
+    <string name="txt_mensaje3P2">En esta cuenta recibiras las transferencias en tu banco favorito</string>
+    <string name="txt_mensaje4P2">Comfirma tu numero de telefono</string>
+    <string name="et_telefono">Confirme su numero de telefono</string>
+    <string name="txt_mensaje5P2">Tus contactos utilizaran este numero para enviarte dinero</string>
+    <string name="txt_mensaje6P2">Aceptar terminos y condiciones</string>
+    <string name="buttonP2">Continuar</string>
+
+</resources>

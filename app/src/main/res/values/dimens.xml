@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginSplashV">16dp</dimen>
+    <dimen name="marginSplashH">64dp</dimen>
+
+    <dimen name="widthImgSplash">250dp</dimen>
+    <dimen name="heightImgSplash">250dp</dimen>
+
+    <dimen name="veinteSP">20sp</dimen>
+    <dimen name="marginPantallasV">16dp</dimen>
+    <dimen name="marginPantallasH">20dp</dimen>
+
+    <dimen name="cienDP">100dp</dimen>
+    <dimen name="veinteDP">20dp</dimen>
+    <dimen name="treintaSP">30sp</dimen>
+    <dimen name="btnPantalla1">200dp</dimen>
+    <dimen name="alturaImagen1">200dp</dimen>
+
+    <dimen name="tvPantalla2">30sp</dimen>
+    <dimen name="tvPantalla2M2">15sp</dimen>
+    <dimen name="tvPantalla2M3">12sp</dimen>
+
+    <dimen name="alturaEditext">48dp</dimen>
+    <dimen name="btnPantalla2">200dp</dimen>
+    <dimen name="cuarentayochoDP">48dp</dimen>
+    <dimen name="diezDP">10dp</dimen>
+    <dimen name="doceDP">12dp</dimen>
+    <dimen name="trescientosDP">300dp</dimen>
+
+<!--    Para los margenes de altura entre elementos pantalla 2-->
+    <dimen name="checkbox">100dp</dimen>
+    <dimen name="textoTerminos">20sp</dimen>
+
+</resources>
