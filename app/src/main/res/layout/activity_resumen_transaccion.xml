@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.EnrollaUni">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/gray_claro"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/marginPantallasV"
+        android:layout_marginTop="@dimen/marginPantallasV"
+        android:layout_marginRight="@dimen/marginPantallasH"
+        android:layout_marginLeft="@dimen/marginPantallasH">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/resumenTransaccion"
+            android:textSize="@dimen/resumenP4"
+            android:layout_marginTop="@dimen/treintaSP"
+            android:textAlignment="center"
+            android:textColor="@color/azulito" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/origen"
+            android:textSize="@dimen/tvPantalla2M2"
+            android:layout_marginTop="@dimen/treintaSP"
+            android:textColor="@color/azulito" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tvCuentaOrigen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/numeroCuenta"
+            android:textSize="@dimen/tvPantalla2M2"
+            android:textColor="@color/azulito" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/beneficiario"
+            android:textSize="@dimen/tvPantalla2M2"
+            android:layout_marginTop="@dimen/treintaSP"
+            android:textColor="@color/azulito" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tvBeneficiario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/nombreBeneficiario"
+            android:textSize="@dimen/tvPantalla2M2"
+            android:textColor="@color/azulito" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/valor"
+            android:textSize="@dimen/tvPantalla2M2"
+            android:layout_marginTop="@dimen/treintaSP"
+            android:textColor="@color/azulito" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tvMonto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/cantidad"
+            android:textSize="@dimen/tvPantalla2M2"
+            android:textColor="@color/azulito" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/conceptoResumen"
+            android:textSize="@dimen/tvPantalla2M2"
+            android:layout_marginTop="@dimen/treintaSP"
+            android:textColor="@color/azulito" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tvConcepto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/concepto"
+            android:textSize="@dimen/tvPantalla2M2"
+            android:textColor="@color/azulito" />
+
+
+        <Button
+            android:id="@+id/btnAceptar"
+            android:layout_width="@dimen/btnPantalla2"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen1P3"
+            android:text="@string/btnAceptarP3"
+            android:textColor="@color/white"
+            android:background="@drawable/boton_continuar"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

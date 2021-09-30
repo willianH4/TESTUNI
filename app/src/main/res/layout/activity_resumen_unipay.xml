@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.EnrollaUni">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/gray_claro"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/marginPantallasV"
+        android:layout_marginTop="@dimen/marginPantallasV"
+        android:layout_marginRight="@dimen/marginPantallasH"
+        android:layout_marginLeft="@dimen/marginPantallasH">
+
+        <TextView
+            android:id="@+id/tvMensaje1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/resumenUNI"
+            android:textSize="@dimen/resumenP4"
+            android:layout_marginTop="@dimen/treintaSP"
+            android:textAlignment="center"
+            android:textColor="@color/azulito" />
+
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/tvMensaje2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/resumenCuenta"
+            android:textSize="@dimen/tvPantalla2M2"
+            android:layout_marginTop="@dimen/treintaSP"
+            android:textColor="@color/azulito" />
+
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/tvMensaje3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/resumenTelefono"
+            android:textSize="@dimen/tvPantalla2M2"
+            android:layout_marginTop="@dimen/treintaSP"
+            android:textColor="@color/azulito" />
+
+        <TextView
+            android:id="@+id/tvMensaje4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/resumenConfirmacion"
+            android:textSize="@dimen/tvPantalla2M2"
+            android:layout_marginTop="@dimen/treintaSP"
+            android:textColor="@color/azulito" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alturaEditext"
+            android:hint="@string/resumenEmail"
+            android:inputType="textEmailAddress"
+            />
+
+        <TextView
+            android:id="@+id/tvMensaje5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/resumenOpcional"
+            android:textSize="@dimen/tvPantalla2M2"
+            android:textColor="@color/azulito" />
+
+        <Button
+            android:id="@+id/btnAceptar"
+            android:layout_width="@dimen/btnPantalla2"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen1P3"
+            android:text="@string/btnAceptarP3"
+            android:textColor="@color/white"
+            android:background="@drawable/boton_continuar"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

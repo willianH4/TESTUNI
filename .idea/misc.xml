@@ -5,10 +5,21 @@
       <map>
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/drawable/boton_comenzar.xml" value="1.0071428571428571" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/drawable/boton_continuar.xml" value="0.2203125" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/drawable/estiloboton.xml" value="0.2203125" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/drawable/ic_close.xml" value="0.2203125" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/drawable/ic_info.xml" value="0.2203125" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/drawable/menu.xml" value="0.2203125" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_cuenta_origen.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_enrolla_uni.xml" value="0.25" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_main.xml" value="0.1911231884057971" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_otorgar_permisos.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_resumen_transaccion.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_resumen_unipay.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_splash_screen.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_transferir.xml" value="0.25" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/custom_info.xml" value="0.25" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/toolbar.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

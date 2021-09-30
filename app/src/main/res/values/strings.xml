@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">UNIPAY</string>
+    <string name="buttonBack">BACK</string>
     <string name="txt_bienvenida">Bienvenido a UNIpay</string>
     <string name="txt_mensaje1P1">Envia y recibe dinero con nuestra app</string>
     <string name="txt_mensaje2P1">Lorem ipsum dolor asim amet</string>
     <string name="buttonP1">Comenzar</string>
     <string name="imgConten1">Transacciones de banco a banco</string>
 
+    <!--    Textos para las pantalla 2-->
     <string name="txt_mensaje1P2">Enrolla tu UNIpay</string>
     <string name="txt_mensaje2P2">Elige tu cuenta</string>
 
@@ -26,4 +28,41 @@
     <string name="txt_mensaje6P2">Aceptar terminos y condiciones</string>
     <string name="buttonP2">Continuar</string>
 
+    <!--    Textos para la pantalla 3 otorgar permisos sobre los contactos-->
+    <string name="uni">UNIpay</string>
+    <string name="parrafoP3">UNIPay optimiza tu experiencia con el uso de los contactos de tu móvil y verifica con quienes puedes
+        hacer más fácil tus transacciones</string>
+    <string name="btnAceptarP3">Aceptar</string>
+    <string name="texto1P3">Doy permiso para que UNIPay</string>
+    <string name="texto2P3">acceda a mis contactos</string>
+    <string name="botton">acceda a mis contactos</string>
+
+    <!--    Textos para pantalla 4 Resumen UNIpay-->
+    <string name="resumenUNI">Este es el resumen de tu UNIPay</string>
+    <string name="resumenCuenta">Cuenta:</string>
+    <string name="resumenTelefono">Teléfono</string>
+    <string name="resumenConfirmacion">Deseas que te notifiquemos?</string>
+    <string name="resumenEmail">Email</string>
+    <string name="resumenOpcional">Opcional</string>
+
+    <!--    Textos para la pantalla transferir-->
+    <string name="transferir">Transferir</string>
+    <string name="telefonoAEnvar">Teléfono a enviar</string>
+    <string name="monto">Monto</string>
+    <string name="concepto">Concepto</string>
+    <string name="signoDolar">$</string>
+    <string name="descripcion">Pago extra</string>
+    <string name="numeroTel">7655 5499</string>
+    <string name="siguiente">Siguiente</string>
+    
+<!--    Textos para la pantalla resumen de la transaccion-->
+    <string name="resumenTransaccion">Resumen de la transacción</string>
+    <string name="origen">Transacción desde cuenta:</string>
+    <string name="beneficiario">Beneficiario:</string>
+    <string name="nombreBeneficiario">Daniel Hernández 7877 8899</string>
+    <string name="valor">Por el valor de:</string>
+    <string name="conceptoResumen">Concepto</string>
+    <string name="aceptarResumen">Aceptar</string>
+    <string name="numeroCuenta">0982182</string>
+    <string name="cantidad">1200</string>
 </resources>
