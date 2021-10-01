@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".DatosUsuario"
+            android:exported="true" />
+        <activity
+            android:name=".ui.CambiarAlias"
+            android:exported="true" />
+        <activity
             android:name=".ui.ResumenTransaccion"
             android:exported="true" />
         <activity

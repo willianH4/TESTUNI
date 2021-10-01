@@ -36,6 +36,7 @@
     <string name="texto1P3">Doy permiso para que UNIPay</string>
     <string name="texto2P3">acceda a mis contactos</string>
     <string name="botton">acceda a mis contactos</string>
+    <string name="mensajeModal">"UNI-ACH" quiere acceder a tus contactos.</string>
 
     <!--    Textos para pantalla 4 Resumen UNIpay-->
     <string name="resumenUNI">Este es el resumen de tu UNIPay</string>
@@ -54,8 +55,8 @@
     <string name="descripcion">Pago extra</string>
     <string name="numeroTel">7655 5499</string>
     <string name="siguiente">Siguiente</string>
-    
-<!--    Textos para la pantalla resumen de la transaccion-->
+
+    <!--    Textos para la pantalla resumen de la transaccion-->
     <string name="resumenTransaccion">Resumen de la transacción</string>
     <string name="origen">Transacción desde cuenta:</string>
     <string name="beneficiario">Beneficiario:</string>
@@ -65,4 +66,37 @@
     <string name="aceptarResumen">Aceptar</string>
     <string name="numeroCuenta">0982182</string>
     <string name="cantidad">1200</string>
+
+    <!--    Textos para la pantalla cambiar Alias-->
+    <string name="cambiarAlias">Cambiar Alias</string>
+    <string name="introduceTuNuevaCuenta">Introduce tu nueva cuenta favorita</string>
+    <string name="nuevaCuenta">Nueva cuenta</string>
+    <string name="btnNueva">Guardar</string>
+
+    <!--    Texto para la pantalla Datos de usuario-->
+    <string name="nombreU">Nombre de usuario</string>
+    <string name="numeroDeC">Número de cuenta</string>
+    <string name="historialT">Historial de transacciones</string>
+    <string name="convertirA">Convertir en alias</string>
+
+    <!--    Texto para la pantalla historial de transacciones-->
+    <string name="historialTransacciones">Historial de transacciones</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="origenTransaccion">Origen: </string>
+    <string name="destinoTransaccion">Destino: </string>
+    <string name="conceptoTransaccion">Concepto: </string>
+    <string name="fechaCreacion">Fecha creación: </string>
+    <string name="montoTransaccion">Monto</string>
+
+<!--    Texto para modal detalle historial de transacciones-->
+    <string name="detalleTransaccion">Detalle de la transacción</string>
+    <string name="cuentaOrigen">Cuenta origen: </string>
+    <string name="montoModal">Monto: </string>
+    <string name="numeroDeDestino">Número de destino: </string>
+    <string name="correoDestino">Correo destino: </string>
+    <string name="fechaCreacionModal">Fecha creación: </string>
+    <string name="fechaAplicacion">Fecha aplicación: </string>
+    <string name="creadoPor">Creado por: </string>
+    <string name="conceptoModal">Concepto: </string>
 </resources>

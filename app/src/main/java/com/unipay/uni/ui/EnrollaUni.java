@@ -23,6 +23,10 @@ public class EnrollaUni extends Activity {
     private ImageButton imgInfo;
     private CheckBox cbTerminos;
 
+    //instancia de la clase modal, contiene todos los metodos de llamado a las ventanas
+    // tipo modals de la app
+    ModalToastCustom modal = new ModalToastCustom();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +40,7 @@ public class EnrollaUni extends Activity {
             @Override
             public void onClick(View view) {
 //                Toast.makeText(getApplicationContext(),"Test para imageButton",Toast.LENGTH_SHORT).show();
-                mostrarModalInfo();
+                modal.modalInformation(EnrollaUni.this);
             }
         });
 
@@ -64,19 +68,4 @@ public class EnrollaUni extends Activity {
         });
     }
 
-    private void mostrarModalInfo() {
-        String mensaje = "Elige tu cuenta podras enviar y recibir dinero a cualquier usuario de cualquier banco, " +
-                "que este registrado en la app UNIpay";
-        dialogo = new AlertDialog.Builder(EnrollaUni.this);
-        dialogo.setIcon(R.drawable.ic_info);
-        dialogo.setTitle("Información");
-        dialogo.setMessage(mensaje);
-        dialogo.setCancelable(false);
-        dialogo.setNegativeButton("Cerrar", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialogo, int id) {
-                //Toast. makeText(getApplicationContext(), "Operacion Cancelada.", Toast. LENGTH LONG). show(),’
-            }
-        });
-        dialogo.show();
-    }
 }

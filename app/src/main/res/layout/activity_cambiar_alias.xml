@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/white"
+            >
+
+            <!--@color/colorGreenLight-->
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_marginBottom="50dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/azulito"
+                        android:text="@string/cambiarAlias"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:layout_marginTop="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@color/azulito"
+                        android:text="@string/introduceTuNuevaCuenta"
+                        tools:ignore="RtlCompat" />
+
+                    <EditText
+                        android:id="@+id/tvNuevaCuenta"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/alturaEditext"
+                        android:hint="Nueva cuenta"
+                        />
+
+
+                    <Button
+                        android:id="@+id/btnContinuar"
+                        android:layout_width="@dimen/btnPantalla2"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginBottom="40dp"
+                        android:text="@string/btnNueva"
+                        android:textColor="@color/white"
+                        android:background="@drawable/boton_continuar"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>

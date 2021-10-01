@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="7dp"
+        android:elevation="5dp"
+        android:layout_alignParentRight="true"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <!--@color/colorGreenLight-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:background="@color/white"
+                android:layout_marginBottom="25dp">
+
+                <TextView
+                    android:id="@+id/tvHistorialTransacciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/historialT"
+                    android:textAlignment="center"
+                    android:textColor="@color/azulito"
+                    android:textSize="20sp"
+                    tools:ignore="RtlCompat" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/celeste" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuentaOrigen"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/tvCuentaOrigen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0928271"
+                    android:textAlignment="center"
+                    android:textColor="@color/azulito"
+                    android:textSize="12sp"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/montoModal"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/tvMonto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="200"
+                    android:textAlignment="center"
+                    android:textColor="@color/azulito"
+                    android:textSize="12sp"
+                    tools:ignore="RtlCompat" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
