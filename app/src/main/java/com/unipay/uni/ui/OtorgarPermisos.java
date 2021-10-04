@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -49,4 +50,9 @@ public class OtorgarPermisos extends AppCompatActivity {
             requestPermissions(new String[]{Manifest.permission.READ_CONTACTS}, REQUEST_CODE);
         }
     }
+
+//    private void transacciones(){
+//        Intent intent = new Intent(OtorgarPermisos.this, SeguimientoTransaccion.class);
+//        startActivity(intent);
+//    }
 }

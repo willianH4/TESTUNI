@@ -40,8 +40,8 @@
 
     <!--    Textos para pantalla 4 Resumen UNIpay-->
     <string name="resumenUNI">Este es el resumen de tu UNIPay</string>
-    <string name="resumenCuenta">Cuenta:</string>
-    <string name="resumenTelefono">Teléfono</string>
+    <string name="resumenCuenta">Cuenta: </string>
+    <string name="resumenTelefono">Teléfono: </string>
     <string name="resumenConfirmacion">Deseas que te notifiquemos?</string>
     <string name="resumenEmail">Email</string>
     <string name="resumenOpcional">Opcional</string>
@@ -89,7 +89,7 @@
     <string name="fechaCreacion">Fecha creación: </string>
     <string name="montoTransaccion">Monto</string>
 
-<!--    Texto para modal detalle historial de transacciones-->
+    <!--    Texto para modal detalle historial de transacciones-->
     <string name="detalleTransaccion">Detalle de la transacción</string>
     <string name="cuentaOrigen">Cuenta origen: </string>
     <string name="montoModal">Monto: </string>

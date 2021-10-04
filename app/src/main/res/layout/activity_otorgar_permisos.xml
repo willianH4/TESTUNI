@@ -16,6 +16,11 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
        />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -77,8 +82,11 @@
             android:textAlignment="center"
             android:text="@string/texto2P3"
             android:textSize="@dimen/tvPantalla2M2"
-            android:textColor="@color/azulito" />
+            android:textColor="@color/azulito"
+            android:layout_marginBottom="@dimen/marginScrollBotton"/>
 
     </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

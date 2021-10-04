@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
         btnComenzar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, EnrollaUni.class);
+                Intent intent = new Intent(MainActivity.this, Transfiere.class);
                 startActivity(intent);
             }
         });

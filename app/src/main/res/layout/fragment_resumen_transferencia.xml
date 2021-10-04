@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/marginPantallasV"
+    android:layout_marginBottom="@dimen/marginPantallasV"
+    android:layout_marginRight="@dimen/marginPantallasH"
+    android:layout_marginLeft="@dimen/marginPantallasH"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ResumenTransferenciaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ly2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTexto1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textoTerminos"
+            android:text="Cuenta de origen seleccionada: " />
+
+        <TextView
+            android:id="@+id/tvCuentaOrigenSeleccionada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textoTerminos"
+            android:text="092878172" />
+
+        <TextView
+            android:id="@+id/tvTexto2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Resumen de la transacción"
+            android:textAlignment="center"
+            android:textSize="@dimen/textoTerminos"
+            android:textColor="@color/azulito"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTexto3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Transacción desde cuenta:"
+            android:textColor="@color/azulito"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCuentaOrigen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="XXXXXX-XXXXX"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textColor="@color/azulito"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTexto4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="15sp"
+            android:text="Transacción desde cuenta:"
+            android:textColor="@color/azulito"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvBeneficiario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="XXXXXX-XXXXX"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:textColor="@color/azulito"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTexto5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="15sp"
+            android:text="Transacción desde cuenta:"
+            android:textColor="@color/azulito"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvValorOperacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="XXXXXX-XXXXX"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textColor="@color/azulito"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTexto6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="15sp"
+            android:text="Transacción desde cuenta:"
+            android:textColor="@color/azulito"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvConceptoOperacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="XXXXXX-XXXXX"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textColor="@color/azulito"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnTransferir"
+            android:layout_width="@dimen/btnPantalla2"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margen1P3"
+            android:layout_marginBottom="@dimen/marginScrollBotton"
+            android:background="@drawable/boton_continuar"
+            android:text="Transferir"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

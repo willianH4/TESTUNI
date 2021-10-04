@@ -16,6 +16,11 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -121,8 +126,11 @@
             android:text="@string/btnAceptarP3"
             android:textColor="@color/white"
             android:background="@drawable/boton_continuar"
+            android:layout_marginBottom="@dimen/marginScrollBotton"
             />
 
     </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

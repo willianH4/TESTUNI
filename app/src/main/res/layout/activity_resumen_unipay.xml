@@ -16,6 +16,11 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,28 +41,63 @@
             android:textAlignment="center"
             android:textColor="@color/azulito" />
 
-        <TextView
-            android:textAlignment="center"
-            android:id="@+id/tvMensaje2"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="@string/resumenCuenta"
-            android:textSize="@dimen/tvPantalla2M2"
-            android:layout_marginTop="@dimen/treintaSP"
-            android:textColor="@color/azulito" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <TextView
-            android:textAlignment="center"
-            android:id="@+id/tvMensaje3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="@string/resumenTelefono"
-            android:textSize="@dimen/tvPantalla2M2"
-            android:layout_marginTop="@dimen/treintaSP"
-            android:textColor="@color/azulito" />
+            <TextView
+                android:textAlignment="textStart"
+                android:id="@+id/tvMensaje2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginRight="@dimen/diezDP"
+                android:text="@string/resumenCuenta"
+                android:textSize="@dimen/tvPantalla2M2"
+                android:layout_marginTop="@dimen/treintaSP"
+                android:textColor="@color/azulito" />
 
+            <TextView
+                android:id="@+id/tvCuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="01921718"
+                android:textSize="@dimen/tvPantalla2M2"
+                android:layout_marginTop="@dimen/treintaSP"
+                android:textColor="@color/azulito" />
+
+        </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:textAlignment="textStart"
+        android:id="@+id/tvMensaje3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/diezDP"
+        android:textStyle="bold"
+        android:text="@string/resumenTelefono"
+        android:textSize="@dimen/tvPantalla2M2"
+        android:layout_marginTop="@dimen/treintaSP"
+        android:textColor="@color/azulito" />
+
+    <TextView
+        android:textAlignment="textStart"
+        android:id="@+id/tvTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="7626 6261"
+        android:textSize="@dimen/tvPantalla2M2"
+        android:layout_marginTop="@dimen/treintaSP"
+        android:textColor="@color/azulito" />
+
+</LinearLayout>
         <TextView
             android:id="@+id/tvMensaje4"
             android:layout_width="match_parent"
@@ -94,8 +134,11 @@
             android:text="@string/btnAceptarP3"
             android:textColor="@color/white"
             android:background="@drawable/boton_continuar"
+            android:layout_marginBottom="@dimen/marginScrollBotton"
             />
 
     </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

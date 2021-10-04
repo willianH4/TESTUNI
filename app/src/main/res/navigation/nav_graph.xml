@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/destinatarioFragment">
+
+    <fragment
+        android:id="@+id/destinatarioFragment"
+        android:name="com.unipay.uni.DestinatarioFragment"
+        android:label="fragment_destinatario"
+        tools:layout="@layout/fragment_destinatario" >
+        <action
+            android:id="@+id/action_destinatarioFragment_to_transferirFragment"
+            app:destination="@id/transferirFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/transferirFragment"
+        android:name="com.unipay.uni.TransferirFragment"
+        android:label="fragment_transferir"
+        tools:layout="@layout/fragment_transferir" >
+        <action
+            android:id="@+id/action_transferirFragment_to_resumenTransferenciaFragment"
+            app:destination="@id/resumenTransferenciaFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/resumenTransferenciaFragment"
+        android:name="com.unipay.uni.ResumenTransferenciaFragment"
+        android:label="fragment_resumen_transferencia"
+        tools:layout="@layout/fragment_resumen_transferencia"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+</navigation>

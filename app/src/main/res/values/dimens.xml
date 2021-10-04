@@ -7,6 +7,7 @@
     <dimen name="heightImgSplash">250dp</dimen>
 
     <dimen name="veinteSP">20sp</dimen>
+    <dimen name="marginScrollBotton">24dp</dimen>
     <dimen name="marginPantallasV">16dp</dimen>
     <dimen name="marginPantallasH">20dp</dimen>
 
