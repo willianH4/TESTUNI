@@ -46,13 +46,14 @@ public class OtorgarPermisos extends AppCompatActivity {
 
         if (permisoContactos == PackageManager.PERMISSION_GRANTED){
             Toast.makeText(this, "Permiso para acceder a contactos concedido!", Toast.LENGTH_SHORT).show();
+            verTransacciones();
         }else {
             requestPermissions(new String[]{Manifest.permission.READ_CONTACTS}, REQUEST_CODE);
         }
     }
 
-//    private void transacciones(){
-//        Intent intent = new Intent(OtorgarPermisos.this, SeguimientoTransaccion.class);
-//        startActivity(intent);
-//    }
+    private void verTransacciones(){
+        Intent intent = new Intent(OtorgarPermisos.this, ResumenUnipay.class);
+        startActivity(intent);
+    }
 }

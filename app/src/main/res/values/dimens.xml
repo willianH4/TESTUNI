@@ -31,7 +31,7 @@
 <!--    Para los margenes de altura entre elementos pantalla 2-->
     <dimen name="checkbox">100dp</dimen>
     <dimen name="textoTerminos">20sp</dimen>
-    <dimen name="alturaCbx">48dp</dimen>
+    <dimen name="alturaCbx">60dp</dimen>
 
 <!--    Margenes para la pantalla 3-->
     <dimen name="margen1P3">100dp</dimen>

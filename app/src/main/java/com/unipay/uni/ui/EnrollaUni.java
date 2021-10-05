@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ public class EnrollaUni extends Activity {
     private Button btnContinuar;
     private ImageButton imgInfo;
     private CheckBox cbTerminos;
+    private EditText etConfirmarTelefono;
 
     //instancia de la clase modal, contiene todos los metodos de llamado a las ventanas
     // tipo modals de la app
@@ -35,6 +37,7 @@ public class EnrollaUni extends Activity {
         btnContinuar = findViewById(R.id.btnContinuar);
         imgInfo = findViewById(R.id.imgInfo);
         cbTerminos = findViewById(R.id.cbTerminos);
+        etConfirmarTelefono = findViewById(R.id.etConfirmarTelefono);
 
         imgInfo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,25 +50,39 @@ public class EnrollaUni extends Activity {
         cbTerminos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (cbTerminos.isChecked() == true){
-                    btnContinuar.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Intent intent = new Intent(EnrollaUni.this, OtorgarPermisos.class);
-                            startActivity(intent);
-                        }
-                    });
-                }else if(cbTerminos.isChecked() == false){
-                    btnContinuar.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Toast.makeText(getApplicationContext(),"Por favor acepta los terminos y " +
-                                    "condiciones",Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
+                validarCheckBox();
             }
         });
     }
 
+    private void validarTelefono() {
+        if(etConfirmarTelefono.getText().toString().isEmpty()){
+            Toast.makeText(getApplicationContext(),"Por favor ingresa tu numero de telefono",Toast.LENGTH_SHORT).show();
+        }else if(etConfirmarTelefono.getText().toString().length() < 6) {
+            Toast.makeText(getApplicationContext(), "numero de telefono no valido", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(getApplicationContext(), "Numero de telefono valido", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(EnrollaUni.this, OtorgarPermisos.class);
+            startActivity(intent);
+        }
+    }
+
+    private void validarCheckBox() {
+        if (cbTerminos.isChecked() == true){
+            btnContinuar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    validarTelefono();
+                }
+            });
+        }else if(cbTerminos.isChecked() == false){
+            btnContinuar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getApplicationContext(),"Por favor acepta los terminos y " +
+                            "condiciones",Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+    }
 }

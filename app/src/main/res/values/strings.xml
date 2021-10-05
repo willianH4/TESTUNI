@@ -99,4 +99,18 @@
     <string name="fechaAplicacion">Fecha aplicación: </string>
     <string name="creadoPor">Creado por: </string>
     <string name="conceptoModal">Concepto: </string>
+
+    <string-array name="steps">
+        <item>Origen y contactos</item>
+        <item>Trnsferir</item>
+        <item>Resumen</item>
+    </string-array>
+
+<!--    Texto de descripcion para el floating action button-->
+    <string name="fab_content_desc">Floating</string>
+    
+<!--    Texto para el custom su transaccion fue realizada exitosamente-->
+    <string name="exito">Su transacción fue realizada exitosamente.</string>
+    <string name="btn_finalizar">Finalizar</string>
+
 </resources>

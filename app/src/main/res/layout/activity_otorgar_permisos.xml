@@ -48,7 +48,7 @@
             android:fontFamily="sans-serif"
             android:textAlignment="center"
             android:text="@string/parrafoP3"
-            android:textSize="@dimen/tvPantalla2M2"
+            android:textSize="@dimen/textoTerminos"
             android:layout_marginTop="@dimen/treintaSP"
             android:textColor="@color/azulito" />
 
@@ -70,7 +70,7 @@
             android:fontFamily="sans-serif"
             android:textAlignment="center"
             android:text="@string/texto1P3"
-            android:textSize="@dimen/tvPantalla2M2"
+            android:textSize="@dimen/textoTerminos"
             android:layout_marginTop="@dimen/treintaSP"
             android:textColor="@color/azulito" />
 
@@ -81,7 +81,7 @@
             android:fontFamily="sans-serif"
             android:textAlignment="center"
             android:text="@string/texto2P3"
-            android:textSize="@dimen/tvPantalla2M2"
+            android:textSize="@dimen/textoTerminos"
             android:textColor="@color/azulito"
             android:layout_marginBottom="@dimen/marginScrollBotton"/>
 

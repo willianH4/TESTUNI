@@ -36,7 +36,7 @@ public class ModalToastCustom extends AppCompatActivity{
     public void modalInformation(final Context context) {
         myDialog = new Dialog(context);
         myDialog.setContentView(R.layout.custom_info);
-        TextView tvAcept = (TextView)myDialog.findViewById(R.id.tvAccept);
+        TextView tvAcept = myDialog.findViewById(R.id.tvAccept);
 
         tvAcept.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +49,21 @@ public class ModalToastCustom extends AppCompatActivity{
         myDialog.show();
     }
 
+    public void modalConfirmacionInicio(final Context context) {
+        myDialog = new Dialog(context);
+        myDialog.setContentView(R.layout.custom_confirmacion);
+        Button btnAccept = myDialog.findViewById(R.id.btnAccept);
+
+        btnAccept.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
+    }
     //    private void mostrarModalInfo() {
 //        String mensaje = "Elige tu cuenta podras enviar y recibir dinero a cualquier usuario de cualquier banco, " +
 //                "que este registrado en la app UNIpay";

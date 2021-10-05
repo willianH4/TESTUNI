@@ -9,6 +9,7 @@
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/drawable/ic_close.xml" value="0.2203125" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/drawable/ic_info.xml" value="0.2203125" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/drawable/menu.xml" value="0.2203125" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/font/roboto_italic.xml" value="0.1287037037037037" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_cambiar_alias.xml" value="0.25" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_cuenta_origen.xml" value="0.33" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_datos_usuario.xml" value="0.25" />
@@ -20,12 +21,13 @@
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_splash_screen.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_transacciones.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_transferir.xml" value="0.25" />
-        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_transfiere.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_transfiere.xml" value="0.30173775671406006" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/custom_confirmacion.xml" value="0.25" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/custom_detalle_transaccion.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/custom_info.xml" value="0.22" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/custom_permission_read_contacts.xml" value="0.22" />
-        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/fragment_destinatario.xml" value="0.25" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/custom_transaccion_efectuada.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/fragment_destinatario.xml" value="0.22" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/fragment_historial_transacciones.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/fragment_origen_contactos.xml" value="0.22" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/fragment_resumen_transaccion.xml" value="0.20416666666666666" />

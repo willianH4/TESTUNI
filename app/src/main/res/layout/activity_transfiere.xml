@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/marginPantallasV"
+        >
+
+        <com.shuhart.stepview.StepView
+            android:id="@+id/step_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:sv_stepLineWidth="2dp"
+            app:sv_stepPadding="4dp"
+            app:sv_nextStepLineColor="@color/celeste"
+            app:sv_doneCircleColor="@color/celeste"
+            app:sv_doneStepLineColor="@color/celeste"
+            app:sv_doneCircleRadius="20dp"
+            app:sv_selectedCircleRadius="20dp"
+            app:sv_selectedStepNumberColor="@color/celeste"
+            app:sv_stepViewStyle="@style/StepView"
+            app:sv_doneStepMarkColor="@color/celeste"
+            app:sv_stepNumberTextSize="12sp"
+            app:sv_animationType="Line"
+            app:sv_stepsNumber="2"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/azulito"
+                android:textSize="12sp"
+                android:layout_marginLeft="@dimen/marginPantallasH"
+                android:text="Origen"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:textSize="12sp"
+                android:textColor="@color/azulito"
+                android:text="Transferir"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -13,4 +67,4 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
