@@ -15,9 +15,6 @@ import android.view.ViewGroup;
 
 public class DestinatarioFragment extends Fragment {
 
-    NavController navController;
-    private DestinatarioFragment binding;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -25,9 +22,4 @@ public class DestinatarioFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_destinatario, container, false);
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        navController = Navigation.findNavController(view);
-        super.onViewCreated(view, savedInstanceState);
-    }
 }

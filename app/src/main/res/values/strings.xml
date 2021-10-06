@@ -1,4 +1,5 @@
 <resources>
+<!--    Textos para la pantalla principal-->
     <string name="app_name">UNIPAY</string>
     <string name="buttonBack">BACK</string>
     <string name="txt_bienvenida">Bienvenido a UNIpay</string>
@@ -22,10 +23,10 @@
     </string-array>
 
     <string name="txt_mensaje3P2">En esta cuenta recibiras las transferencias en tu banco favorito</string>
-    <string name="txt_mensaje4P2">Comfirma tu numero de telefono</string>
-    <string name="et_telefono">Confirme su numero de telefono</string>
-    <string name="txt_mensaje5P2">Tus contactos utilizaran este numero para enviarte dinero</string>
-    <string name="txt_mensaje6P2">Aceptar terminos y condiciones</string>
+    <string name="txt_mensaje4P2">Confirma tu número de teléfono</string>
+    <string name="et_telefono">Confirme su numero de teléfono</string>
+    <string name="txt_mensaje5P2">Tus contactos utilizaran este número para enviarte dinero</string>
+    <string name="txt_mensaje6P2">Aceptar términos y condiciones</string>
     <string name="buttonP2">Continuar</string>
 
     <!--    Textos para la pantalla 3 otorgar permisos sobre los contactos-->

@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 
 public class TransferirFragment extends Fragment {
 
-    NavController navController;
+//    NavController navController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -23,9 +23,9 @@ public class TransferirFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_transferir, container, false);
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        navController = Navigation.findNavController(view);
-        super.onViewCreated(view, savedInstanceState);
-    }
+//    @Override
+//    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+//        navController = Navigation.findNavController(view);
+//        super.onViewCreated(view, savedInstanceState);
+//    }
 }
