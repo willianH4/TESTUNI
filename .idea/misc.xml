@@ -15,23 +15,27 @@
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_datos_usuario.xml" value="0.25" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_enrolla_uni.xml" value="0.25" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_main.xml" value="0.1911231884057971" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_mi_codigo_qr.xml" value="0.25" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_mi_codigo_qr_con_monto.xml" value="0.25" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_otorgar_permisos.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_resumen_transaccion.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_resumen_unipay.xml" value="0.33" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_splash_screen.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_transacciones.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_transferir.xml" value="0.25" />
-        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_transfiere.xml" value="0.25" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/activity_transfiere.xml" value="0.1" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/custom_confirmacion.xml" value="0.25" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/custom_datos_qr_leido.xml" value="0.2" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/custom_detalle_transaccion.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/custom_info.xml" value="0.22" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/custom_permission_read_contacts.xml" value="0.22" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/custom_qr_no_detectado.xml" value="0.2" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/custom_transaccion_efectuada.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/fragment_destinatario.xml" value="0.18" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/fragment_historial_transacciones.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/fragment_origen_contactos.xml" value="0.22" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/fragment_resumen_transaccion.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/fragment_resumen_transferencia.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/fragment_resumen_transferencia.xml" value="0.25" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/fragment_transferir.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/historial_transacciones_recyclerview.xml" value="0.25" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/layout/toolbar.xml" value="0.20416666666666666" />

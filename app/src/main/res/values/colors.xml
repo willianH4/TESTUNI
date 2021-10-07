@@ -9,6 +9,7 @@
     +    <color name="white">#FFFFFFFF</color>
     +    <color name="azulito">#233B77</color>
     +    <color name="celeste">#3FC8F4</color>
+    <color name="black_gradient">#A5A1A1</color>
     <color name="gray_claro">#E5F2F6</color>
     <color name="red">#BD1A0F</color>
 </resources>

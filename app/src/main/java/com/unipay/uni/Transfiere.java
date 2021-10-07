@@ -6,24 +6,19 @@ import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
-import android.os.Handler;
+import android.text.Html;
+import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.shuhart.stepview.StepView;
-
 import java.util.ArrayList;
 
-public class Transfiere extends AppCompatActivity {
+public class Transfiere extends AppCompatActivity{
+
+    private LinearLayout linearLayout;
+    private TextView[] puntosSlide;
 
     ViewPager2 myViewPager2;
     ViewPagerFragmentAdapter myAdapter;
     private ArrayList<Fragment> arrayList = new ArrayList<>();
-    StepView stepView;
-
-    int stepIndex = 0;
-
-    String[] stepsTexts = {"paso 1", "paso 2", "paso 3"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,35 +33,42 @@ public class Transfiere extends AppCompatActivity {
         arrayList.add(new ResumenTransferenciaFragment());
 
         myAdapter = new ViewPagerFragmentAdapter(getSupportFragmentManager(), getLifecycle());
-        // set Orientation in your ViewPager2
+//         set Orientation in your ViewPager2
         myViewPager2.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
 
         myViewPager2.setAdapter(myAdapter);
 
         myViewPager2.setPageTransformer(new MarginPageTransformer(1500));
 
-        stepView = findViewById(R.id.step_view);
+        linearLayout = findViewById(R.id.linearPuntos);
+        agregarIndicadorPuntos(0);
 
-        stepView.getState()
-                .animationType(StepView.ANIMATION_ALL)
-                .stepsNumber(3)
-                .animationDuration(getResources().getInteger(android.R.integer.config_shortAnimTime))
-                .commit();
-        nextStep();
-    }
-
-    private void nextStep() {
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        myViewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback(){
             @Override
-            public void run() {
-                stepIndex++;
-                if (stepIndex < stepsTexts.length){
-                    stepView.go(stepIndex, true);
-                    nextStep();
-                }
+            public void onPageSelected(int i) {
+                agregarIndicadorPuntos(i);
+                super.onPageSelected(i);
             }
-        }, 4000);
+        });
     }
 
+    private ViewPagerFragmentAdapter getMyAdapter() {
+        return myAdapter;
+    }
+
+    private void agregarIndicadorPuntos(int pos) {
+            puntosSlide = new TextView[3];
+            linearLayout.removeAllViews();
+
+            for (int i = 0; i < puntosSlide.length; i++) {
+                puntosSlide[i] = new TextView(this);
+                puntosSlide[i].setText(Html.fromHtml("&#8226;"));
+                puntosSlide[i].setTextSize(100);
+                puntosSlide[i].setTextColor(getResources().getColor(R.color.white));
+                linearLayout.addView(puntosSlide[i]);
+            }
+            if (puntosSlide.length > 0) {
+                puntosSlide[pos].setTextColor(getResources().getColor(R.color.celeste));
+            }
+    }
 }

@@ -205,9 +205,35 @@
         android:layout_height="match_parent">
 
         <!-- Main content -->
+        <ImageView
+            android:id="@+id/leerQr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/qr_code_read"
+            />
+
+        <ImageView
+            android:id="@+id/generarQr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/qr_code"
+            />
+
+        <ImageView
+            android:id="@+id/generarQrMonto"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/qr_code_gen"
+            />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floating_action_button"
+            android:id="@+id/fabMenuQR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"

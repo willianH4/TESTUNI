@@ -1,5 +1,5 @@
 <resources>
-<!--    Textos para la pantalla principal-->
+    <!--    Textos para la pantalla principal-->
     <string name="app_name">UNIPAY</string>
     <string name="buttonBack">BACK</string>
     <string name="txt_bienvenida">Bienvenido a UNIpay</string>
@@ -107,10 +107,10 @@
         <item>Resumen</item>
     </string-array>
 
-<!--    Texto de descripcion para el floating action button-->
+    <!--    Texto de descripcion para el floating action button-->
     <string name="fab_content_desc">Floating</string>
-    
-<!--    Texto para el custom su transaccion fue realizada exitosamente-->
+
+    <!--    Texto para el custom su transaccion fue realizada exitosamente-->
     <string name="exito">Su transacción fue realizada exitosamente.</string>
     <string name="btn_finalizar">Finalizar</string>
 

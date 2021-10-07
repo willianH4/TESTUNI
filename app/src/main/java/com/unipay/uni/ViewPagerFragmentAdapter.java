@@ -8,10 +8,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 
 public class ViewPagerFragmentAdapter extends FragmentStateAdapter {
 
-    int elementos = 3;
     private ArrayList<Fragment> arrayList = new ArrayList<>();
 
     public ViewPagerFragmentAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
@@ -41,4 +41,5 @@ public class ViewPagerFragmentAdapter extends FragmentStateAdapter {
     public long getItemId(int position) {
         return super.getItemId(position);
     }
+
 }

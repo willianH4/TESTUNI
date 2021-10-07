@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.EnrollaUni">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/gray_claro"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/marginPantallasV"
+            android:layout_marginTop="@dimen/marginPantallasV"
+            android:layout_marginRight="@dimen/marginPantallasH"
+            android:layout_marginLeft="@dimen/marginPantallasH">
+
+            <TextView
+                android:id="@+id/tvMensaje1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mi codigo QR"
+                android:textStyle="bold"
+                android:textSize="@dimen/textoTerminos"
+                android:layout_marginTop="@dimen/treintaSP"
+                android:textAlignment="center"
+                android:textColor="@color/azulito" />
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/qr_code"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvMensaje3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Cuenta asociada a acreditar: "
+                    android:textSize="@dimen/textoTerminos"
+                    android:layout_marginTop="@dimen/treintaSP"
+                    android:textColor="@color/azulito" />
+
+                <TextView
+                    android:id="@+id/tvCuentaAsociada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="XXXXXX22"
+                    android:textSize="@dimen/textoTerminos"
+                    android:layout_marginTop="@dimen/treintaSP"
+                    android:textColor="@color/azulito" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnExportar"
+                android:layout_width="@dimen/btnPantalla2"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen1P3"
+                android:text="Exportar"
+                android:textColor="@color/white"
+                android:background="@drawable/boton_continuar"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -8,75 +8,23 @@
     android:orientation="vertical"
     tools:context=".Transfiere">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/gray_claro"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        />
+
     <LinearLayout
-        android:id="@+id/dots_container"
+        android:id="@+id/linearPuntos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
         android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal" />
-
-    <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/marginPantallasV"
-        >
-
-        <com.shuhart.stepview.StepView
-            android:id="@+id/step_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            app:sv_stepLineWidth="2dp"
-            app:sv_stepPadding="4dp"
-            app:sv_nextStepLineColor="@color/celeste"
-            app:sv_doneCircleColor="@color/celeste"
-            app:sv_doneStepLineColor="@color/celeste"
-            app:sv_doneCircleRadius="20dp"
-            app:sv_selectedCircleRadius="20dp"
-            app:sv_selectedStepNumberColor="@color/celeste"
-            app:sv_stepViewStyle="@style/StepView"
-            app:sv_doneStepMarkColor="@color/celeste"
-            app:sv_stepNumberTextSize="12sp"
-            app:sv_animationType="Line"
-            app:sv_stepsNumber="3"
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/azulito"
-                android:textSize="12sp"
-                android:layout_marginLeft="@dimen/marginPantallasH"
-                android:text="Origen"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:textSize="12sp"
-                android:textColor="@color/azulito"
-                android:text="Transferir"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:textSize="12sp"
-                android:textColor="@color/azulito"
-                android:text="Confirmar transacción"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
 
     <!-- activity_screen_slide.xml -->
     <androidx.viewpager2.widget.ViewPager2
@@ -84,14 +32,5 @@
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
-<!--    <androidx.fragment.app.FragmentContainerView-->
-<!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
-<!--        android:id="@+id/nav_host_fragment"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        app:defaultNavHost="true"-->
-<!--        app:navGraph="@navigation/nav_graph" />-->
-
 
 </LinearLayout>
