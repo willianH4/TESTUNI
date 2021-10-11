@@ -1,4 +1,4 @@
-package com.unipay.uni;
+package com.unipay.uni.ui.adapters;
 
 import android.widget.Toast;
 
@@ -9,6 +9,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
+
+import com.unipay.uni.DestinatarioFragment;
+import com.unipay.uni.ResumenTransferenciaFragment;
+import com.unipay.uni.TransferirFragment;
 
 public class ViewPagerFragmentAdapter extends FragmentStateAdapter {
 

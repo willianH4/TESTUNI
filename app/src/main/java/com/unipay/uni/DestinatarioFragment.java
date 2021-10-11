@@ -27,12 +27,12 @@ public class DestinatarioFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_destinatario, container, false);
 
-        fabMenuQR = view.findViewById(R.id.fabMenuQR);
-        View leerQr, generarQr, generarQrMonto;
-
-        leerQr = view.findViewById(R.id.leerQr);
-        generarQr = view.findViewById(R.id.generarQr);
-        generarQrMonto = view.findViewById(R.id.generarQrMonto);
+//        fabMenuQR = view.findViewById(R.id.fabMenuQR);
+//        View leerQr, generarQr, generarQrMonto;
+//
+//        leerQr = view.findViewById(R.id.leerQr);
+//        generarQr = view.findViewById(R.id.generarQr);
+//        generarQrMonto = view.findViewById(R.id.generarQrMonto);
 
 //        fabMenuQR.setOnClickListener(new View.OnClickListener() {
 //            @Override

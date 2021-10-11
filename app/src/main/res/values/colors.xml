@@ -12,4 +12,7 @@
     <color name="black_gradient">#A5A1A1</color>
     <color name="gray_claro">#E5F2F6</color>
     <color name="red">#BD1A0F</color>
+    <color name="colorPrimary">#6002EE</color>
+    <color name="colorPrimaryDark">#0000C8</color>
+    <color name="colorAccent">#55f7c9</color>
 </resources>

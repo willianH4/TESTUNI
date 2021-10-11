@@ -115,6 +115,7 @@
             android:layout_height="@dimen/alturaEditext"
             android:hint="@string/resumenEmail"
             android:inputType="textEmailAddress"
+            android:background="@drawable/estilo_editext"
             />
 
         <TextView

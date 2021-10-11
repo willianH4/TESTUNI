@@ -1,4 +1,4 @@
-package com.unipay.uni.ui;
+package com.unipay.uni.interfaces;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

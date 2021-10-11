@@ -13,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".MiCodigoQr"
+            android:name=".ui.qr.MiCodigoQr"
             android:exported="true" />
         <activity
-            android:name=".MiCodigoQrConMonto"
+            android:name=".ui.qr.MiCodigoQrConMonto"
             android:exported="true" />
         <activity
             android:name=".Transfiere"
@@ -25,26 +25,70 @@
             android:name=".ui.DatosUsuario"
             android:exported="true" />
         <activity
-            android:name=".ui.CambiarAlias"
-            android:exported="true" />
+            android:name=".ui.principal.CambiarAlias"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.CambiarAlias"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".ui.ResumenTransaccion"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.ResumenTransaccion"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".ui.Transferir"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.Transferir"
+                android:value=".MainActivity" />
+        </activity>
         <activity
-            android:name=".ui.CuentaOrigen"
-            android:exported="true" />
+            android:name=".ui.principal.CuentaOrigen"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.CuentaOrigen"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".ui.ResumenUnipay"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.ResumenUnipay"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".ui.OtorgarPermisos"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.OtorgarPermisos"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".ui.EnrollaUni"
-            android:exported="true" />
+            android:exported="true"
+
+            android:parentActivityName=".MainActivity">
+        <!-- The meta-data tag is required if you support API level 15 and lower -->
+        <meta-data
+            android:name="android.support.EnrollaUni"
+            android:value=".MainActivity" />
+        </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true" />

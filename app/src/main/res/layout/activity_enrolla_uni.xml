@@ -3,18 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/white"
     tools:context=".ui.EnrollaUni">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/my_toolbar"
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/gray_claro"
-            android:elevation="4dp"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            />
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/gray_claro"
+                    android:elevation="4dp"
+                    app:popupTheme="@style/AppTheme.AppBarOverlay"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
 
         <ScrollView
             android:layout_width="match_parent"
@@ -51,15 +59,44 @@
                     android:layout_marginTop="@dimen/treintaSP"
                     android:textColor="@color/azulito" />
 
-
-
-                <Spinner
-                    android:id="@+id/spCuentas"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/cuarentayochoDP"
-                    android:entries="@array/cuentas"
-                    />
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight=".28"
+                    android:background="@drawable/style_spinner"
+                    android:orientation="horizontal">
 
+                        <Spinner
+                            android:id="@+id/spCuentas"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/cuarentayochoDP"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:gravity="center"
+                            android:entries="@array/cuentas"
+                            android:layout_marginLeft="5dp"
+                            android:spinnerMode="dropdown" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/down_filled_triangular_arrow" />
+
+                </RelativeLayout>
+
+<!--                <Spinner-->
+<!--                    android:id="@+id/spCuentas"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/cuarentayochoDP"-->
+<!--                    android:background="@drawable/style_spinner"-->
+<!--                    android:entries="@array/cuentas"-->
+<!--                    />-->
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -104,7 +141,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/alturaEditext"
                     android:hint="@string/et_telefono"
+                    android:background="@drawable/estilo_editext"
                     android:inputType="number"
+                    android:layout_marginTop="2dp"
                     />
 
 

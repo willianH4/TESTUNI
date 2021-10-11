@@ -1,4 +1,4 @@
-package com.unipay.uni;
+package com.unipay.uni.interfaces;
 
 import android.content.Context;
 import android.graphics.Bitmap;

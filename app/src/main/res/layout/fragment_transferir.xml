@@ -78,6 +78,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/alturaEditext"
             android:inputType="number"
+            android:background="@drawable/estilo_editext"
             android:hint="$ 100"/>
 
         <TextView
@@ -94,28 +95,12 @@
             android:id="@+id/etConcepto"
             android:layout_width="match_parent"
             android:layout_height="@dimen/alturaEditext"
+            android:background="@drawable/estilo_editext"
             android:hint="Pago de prestamo"/>
 
     </LinearLayout>
     </ScrollView>
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <!-- Main content -->
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floating_action_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_margin="16dp"
-            android:contentDescription="@string/fab_content_desc"
-            app:srcCompat="@drawable/qr_code"
-            app:backgroundTint="@color/white"/>
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
+    <include layout="@layout/floating_action_button"/>
 
 </RelativeLayout>

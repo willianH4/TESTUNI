@@ -74,7 +74,9 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/alturaEditext"
             android:hint="@string/signoDolar"
+            android:layout_marginTop="2dp"
             android:inputType="numberDecimal"
+            android:background="@drawable/estilo_editext"
             />
 
         <TextView
@@ -93,6 +95,8 @@
             android:layout_height="@dimen/alturaEditext"
             android:hint="@string/descripcion"
             android:inputType="text"
+            android:background="@drawable/estilo_editext"
+            android:layout_marginTop="2dp"
             />
 
         <Button

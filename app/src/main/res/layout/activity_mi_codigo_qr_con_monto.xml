@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20dp"
-    tools:context=".MiCodigoQrConMonto">
+    android:orientation="horizontal"
+    tools:context=".ui.qr.MiCodigoQrConMonto">
 
     <TextView
         android:id="@+id/tvEncabezado"
@@ -44,8 +45,11 @@
         android:layout_width="80dp"
         android:layout_height="@dimen/alturaEditext"
         android:layout_below="@+id/tvMonto"
+        android:hint="$199"
         android:layout_alignParentRight="true"
         android:layout_marginRight="30dp"
+        android:background="@drawable/estilo_editext"
+        android:inputType="numberDecimal"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button

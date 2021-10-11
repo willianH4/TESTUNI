@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Inicia bloque para menu en button -->
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        app:menu_icon="@drawable/qr_code"
+        app:menu_colorNormal="@android:color/transparent"
+        app:menu_labels_style="@style/custom_floating_button"
+        >
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/item1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/qr_code_read"
+            app:borderWidth="0dp"
+            app:fab_label="Leer codigo QR"
+            app:fab_size="mini"
+            app:fab_colorNormal="@color/white"
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/item2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/qr_code_gen"
+            app:borderWidth="0dp"
+            app:fab_label="Generar QR"
+            app:fab_size="mini"
+            app:fab_colorNormal="@color/white"
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/item3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/qr_code_gen"
+            app:borderWidth="0dp"
+            app:fab_label="Generar QR con monto"
+            app:fab_size="mini"
+            app:fab_colorNormal="@color/white"
+            />
+
+    </com.github.clans.fab.FloatingActionMenu>
+    <!-- Finaliza bloque para menu en button -->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

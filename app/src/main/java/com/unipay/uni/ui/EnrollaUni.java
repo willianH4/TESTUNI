@@ -1,10 +1,10 @@
 package com.unipay.uni.ui;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -12,11 +12,15 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.unipay.uni.MainActivity;
 import com.unipay.uni.R;
+import com.unipay.uni.interfaces.ModalToastCustom;
+import com.unipay.uni.ui.principal.CambiarAlias;
 
-public class EnrollaUni extends Activity {
+public class EnrollaUni extends AppCompatActivity {
 
     AlertDialog.Builder dialogo;
 
@@ -33,6 +37,31 @@ public class EnrollaUni extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enrolla_uni);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_back_24));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.azulito));
+        toolbar.setTitleMargin(0, 0, 0, 0);
+//        toolbar.setSubtitle("Tarea CRUD SQLite");
+//        toolbar.setSubtitleTextColor(getResources().getColor(R.color.mycolor));
+//        toolbar.setTitle("Willian Hernandez");
+        setSupportActionBar(toolbar);
+
+        //y esto para pantalla completa (oculta incluso la barra de estado)
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
+        //y esto para pantalla completa (oculta incluso la barra de estado)
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                regresar();
+            }
+        });
 
         btnContinuar = findViewById(R.id.btnContinuar);
         imgInfo = findViewById(R.id.imgInfo);
@@ -53,6 +82,11 @@ public class EnrollaUni extends Activity {
                 validarCheckBox();
             }
         });
+    }
+
+    private void regresar() {
+        Intent intent = new Intent(EnrollaUni.this, MainActivity.class);
+        startActivity(intent);
     }
 
     private void validarTelefono() {

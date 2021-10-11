@@ -1,14 +1,16 @@
-package com.unipay.uni;
+package com.unipay.uni.ui.principal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MiCodigoQrConMonto extends AppCompatActivity {
+import com.unipay.uni.R;
+
+public class CuentaOrigen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mi_codigo_qr_con_monto);
+        setContentView(R.layout.activity_cuenta_origen);
     }
 }
