@@ -1,6 +1,5 @@
 package com.unipay.uni.ui;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,8 +16,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.unipay.uni.MainActivity;
 import com.unipay.uni.R;
-import com.unipay.uni.interfaces.ModalToastCustom;
-import com.unipay.uni.ui.principal.CambiarAlias;
+import com.unipay.uni.utilidades.ModalToastCustom;
 
 public class EnrollaUni extends AppCompatActivity {
 

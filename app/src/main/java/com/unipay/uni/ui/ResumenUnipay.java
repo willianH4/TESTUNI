@@ -15,7 +15,7 @@ import android.widget.EditText;
 
 import com.unipay.uni.R;
 import com.unipay.uni.Transfiere;
-import com.unipay.uni.interfaces.ModalToastCustom;
+import com.unipay.uni.utilidades.ModalToastCustom;
 
 public class ResumenUnipay extends AppCompatActivity {
 

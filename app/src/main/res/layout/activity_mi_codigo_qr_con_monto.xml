@@ -5,115 +5,120 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20dp"
-    android:orientation="horizontal"
     tools:context=".ui.qr.MiCodigoQrConMonto">
 
-    <TextView
-        android:id="@+id/tvEncabezado"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Mi codigo QR con monto"
-        android:textSize="@dimen/textoTerminos"
-        android:textColor="@color/azulito"
-        android:textStyle="bold"
-        android:layout_marginBottom="30dp"
-        android:textAlignment="center"/>
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imvCodigoQr"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_below="@+id/tvEncabezado"
-            android:src="@drawable/qr_code"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tvMonto"
-            android:layout_below="@+id/tvEncabezado"
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="40dp"
-            android:text="Monto"
-            android:textSize="@dimen/textoTerminos"
-            android:textColor="@color/azulito"
-            android:textStyle="bold"
-            />
+            <TextView
+                android:id="@+id/tvEncabezado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:text="Mi codigo QR con monto"
+                android:textAlignment="center"
+                android:textColor="@color/azulito"
+                android:textSize="@dimen/textoTerminos"
+                android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/etMonto"
-        android:layout_width="80dp"
-        android:layout_height="@dimen/alturaEditext"
-        android:layout_below="@+id/tvMonto"
-        android:hint="$199"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="30dp"
-        android:background="@drawable/estilo_editext"
-        android:inputType="numberDecimal"
-        tools:ignore="SpeakableTextPresentCheck" />
+            <ImageView
+                android:id="@+id/imvCodigoQr"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_below="@+id/tvEncabezado"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/qr_code" />
 
-    <Button
-        android:layout_below="@+id/etMonto"
-        android:id="@+id/btnAccept"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_alignParentRight="true"
-        android:text="Generar"
-        android:layout_marginRight="30dp"
-        android:background="@drawable/boton_continuar"
-        android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/tvMonto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvEncabezado"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="Monto    "
+                android:textColor="@color/azulito"
+                android:textSize="@dimen/textoTerminos"
+                android:textStyle="bold" />
 
-    <LinearLayout
-        android:id="@+id/lyCuenta"
-        android:layout_below="@+id/imvCodigoQr"
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <EditText
+                android:id="@+id/etMonto"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/alturaEditext"
+                android:layout_below="@+id/tvMonto"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/estilo_editext"
+                android:gravity="center"
+                android:hint="$1999.99  "
+                android:inputType="numberDecimal"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-        <TextView
-            android:layout_below="@+id/tvEncabezado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:text="Cuenta asociada a acreditar: "
-            android:textSize="@dimen/textoTerminos"
-            android:textColor="@color/azulito"
-            android:textStyle="bold"
-            />
+            <Button
+                android:id="@+id/btnAccept"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etMonto"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/boton_continuar"
+                android:text="Generar"
+                android:textColor="@color/white" />
 
-        <TextView
-            android:id="@+id/cuentaAsociada"
-            android:layout_below="@+id/tvEncabezado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:text="XXXXXXX1"
-            android:textSize="@dimen/textoTerminos"
-            android:textColor="@color/azulito"
-            android:textStyle="bold"
-            />
+            <LinearLayout
+                android:id="@+id/lyCuenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imvCodigoQr"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvEncabezado"
+                    android:layout_alignParentRight="true"
+                    android:text="Cuenta asociada a acreditar: "
+                    android:textColor="@color/azulito"
+                    android:textSize="@dimen/textoTerminos"
+                    android:textStyle="bold" />
 
-    <LinearLayout
-        android:layout_below="@+id/lyCuenta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+                <TextView
+                    android:id="@+id/cuentaAsociada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvEncabezado"
+                    android:layout_alignParentRight="true"
+                    android:text="XXXXXXX1"
+                    android:textColor="@color/azulito"
+                    android:textSize="@dimen/textoTerminos"
+                    android:textStyle="bold" />
 
-        <Button
-            android:layout_below="@+id/lyCuenta"
-            android:id="@+id/btnExportar"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="Exportar"
-            android:layout_gravity="center"
-            android:background="@drawable/boton_continuar"
-            android:textColor="@color/white" />
+            </LinearLayout>
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lyCuenta"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnExportar"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lyCuenta"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/boton_continuar"
+                    android:text="Exportar"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

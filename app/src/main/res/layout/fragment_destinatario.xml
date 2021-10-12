@@ -18,13 +18,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-<!--        <TextView-->
-<!--            android:id="@+id/txtTexto1"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:textSize="@dimen/textoTerminos"-->
-<!--            android:text="Cuenta de origen seleccionada" />-->
 
         <TextView
             android:id="@+id/tvCuentaOrigenSeleccionada"
@@ -76,195 +69,136 @@
             android:textSize="@dimen/textoTerminos"
             android:text="Elige el destinatario" />
 
-        <EditText
-            android:id="@+id/etSearchContact"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/alturaEditext"
-            android:hint="Search contacts..."/>
+<!--        <EditText-->
+<!--            android:id="@+id/etSearchContact"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/alturaEditext"-->
+<!--            android:hint="Search contacts..."/>-->
 
         <!--        Aqui cargar el recyclerview-->
 
-        <androidx.cardview.widget.CardView
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_marginTop="4dp"-->
+<!--            app:cardCornerRadius="5dp"-->
+<!--            android:layout_height="75dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="200dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Kate Bell"-->
+<!--                    />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="555 7872-7272"-->
+<!--                    />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_marginTop="4dp"-->
+<!--            app:cardCornerRadius="5dp"-->
+<!--            android:layout_height="75dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="200dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Jhon Applessed"-->
+<!--                    />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="504 7872-7272"-->
+<!--                    />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_marginTop="4dp"-->
+<!--            app:cardCornerRadius="5dp"-->
+<!--            android:layout_height="75dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="200dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Hana Haro"-->
+<!--                    />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="01 7872-7272"-->
+<!--                    />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="75dp"-->
+<!--            android:layout_marginTop="4dp"-->
+<!--            app:cardCornerRadius="5dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="200dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Tony Stark" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="503 7872-7272" />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="4dp"
-            app:cardCornerRadius="5dp"
-            android:layout_height="75dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:orientation="horizontal">
+            <include layout="@layout/fragment_recyclerview_contactos"/>
 
-                <TextView
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="Kate Bell"
-                    />
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="555 7872-7272"
-                    />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_marginTop="4dp"
-            app:cardCornerRadius="5dp"
-            android:layout_height="75dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="Daniel Higgins"
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="502 7872-7272"
-                    />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_marginTop="4dp"
-            app:cardCornerRadius="5dp"
-            android:layout_height="75dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="Jhon Applessed"
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="504 7872-7272"
-                    />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_marginTop="4dp"
-            app:cardCornerRadius="5dp"
-            android:layout_height="75dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="Hana Haro"
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="01 7872-7272"
-                    />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_marginTop="4dp"
-            app:cardCornerRadius="5dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="Tony Stark" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="503 7872-7272" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
     </LinearLayout>
 
     </ScrollView>
-
-<!--    <RelativeLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
-
-<!--        <com.getbase.floatingactionbutton.FloatingActionsMenu-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_alignParentEnd="true"-->
-<!--            android:layout_alignParentBottom="true"-->
-<!--            app:fab_addButtonColorNormal="@color/celeste"-->
-<!--            app:fab_labelStyle="@style/custom_floating_button"-->
-<!--            >-->
-
-<!--            <com.getbase.floatingactionbutton.FloatingActionButton-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                app:fab_icon="@drawable/qr_code_read"-->
-<!--                app:fab_title="Leer codigo QR"-->
-<!--                android:id="@+id/fabLeer"-->
-<!--                app:fab_colorNormal="@color/white"/>-->
-
-<!--            <com.getbase.floatingactionbutton.FloatingActionButton-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                app:fab_icon="@drawable/qr_code_read"-->
-<!--                app:fab_title="Leer codigo QR"-->
-<!--                android:id="@+id/fabGenerarQr"-->
-<!--                app:fab_colorNormal="@color/white"/>-->
-
-<!--            <com.getbase.floatingactionbutton.FloatingActionButton-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                app:fab_icon="@drawable/qr_code_read"-->
-<!--                app:fab_title="Leer codigo QR"-->
-<!--                android:id="@+id/fabGenerarQrConMonto"-->
-<!--                app:fab_colorNormal="@color/white"/>-->
-
-<!--        </com.getbase.floatingactionbutton.FloatingActionsMenu>-->
-
-<!--    </RelativeLayout>-->
 
     <include layout="@layout/floating_action_button"/>
 

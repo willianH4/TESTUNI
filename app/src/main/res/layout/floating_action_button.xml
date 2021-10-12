@@ -19,9 +19,9 @@
             android:id="@+id/item1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/qr_code_read"
+            android:src="@drawable/qr_code_gen"
             app:borderWidth="0dp"
-            app:fab_label="Leer codigo QR"
+            app:fab_label="Generar QR con monto"
             app:fab_size="mini"
             app:fab_colorNormal="@color/white"
             />
@@ -41,9 +41,9 @@
             android:id="@+id/item3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/qr_code_gen"
+            android:src="@drawable/qr_code_read"
             app:borderWidth="0dp"
-            app:fab_label="Generar QR con monto"
+            app:fab_label="Leer"
             app:fab_size="mini"
             app:fab_colorNormal="@color/white"
             />
