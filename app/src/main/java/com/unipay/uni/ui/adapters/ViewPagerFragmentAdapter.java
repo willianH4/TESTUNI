@@ -1,18 +1,15 @@
 package com.unipay.uni.ui.adapters;
 
-import android.widget.Toast;
-
 import java.util.ArrayList;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
-import androidx.viewpager2.widget.ViewPager2;
 
-import com.unipay.uni.DestinatarioFragment;
-import com.unipay.uni.ResumenTransferenciaFragment;
-import com.unipay.uni.TransferirFragment;
+import com.unipay.uni.ui.transferencias.DestinatarioFragment;
+import com.unipay.uni.ui.transferencias.ResumenTransferenciaFragment;
+import com.unipay.uni.ui.transferencias.TransferirFragment;
 
 public class ViewPagerFragmentAdapter extends FragmentStateAdapter {
 

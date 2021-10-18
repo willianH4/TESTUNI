@@ -1,4 +1,4 @@
-package com.unipay.uni.ui;
+package com.unipay.uni.ui.permisos;
 
 import android.content.Intent;
 import android.os.Bundle;

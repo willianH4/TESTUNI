@@ -1,31 +1,41 @@
-package com.unipay.uni.ui.principal;
+package com.unipay.uni.ui.usuario;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.unipay.uni.MainActivity;
 import com.unipay.uni.R;
+import com.unipay.uni.ui.resumen.HistorialTransacciones;
 
-public class CambiarAlias extends AppCompatActivity {
+public class DatosUsuario extends AppCompatActivity {
+
+    private TextView tvHistorialTransacciones;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cambiar_alias);
+        setContentView(R.layout.activity_datos_usuario);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_back_24));
         toolbar.setTitleTextColor(getResources().getColor(R.color.azulito));
         toolbar.setTitleMargin(0, 0, 0, 0);
-//        toolbar.setSubtitle("Tarea CRUD SQLite");
-//        toolbar.setSubtitleTextColor(getResources().getColor(R.color.mycolor));
-//        toolbar.setTitle("Willian Hernandez");
         setSupportActionBar(toolbar);
+
+        //y esto para pantalla completa (oculta incluso la barra de estado)
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
         //y esto para pantalla completa (oculta incluso la barra de estado)
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -40,7 +50,7 @@ public class CambiarAlias extends AppCompatActivity {
     }
 
     private void regresar() {
-        Intent intent = new Intent(CambiarAlias.this, MainActivity.class);
+        Intent intent = new Intent(DatosUsuario.this, MainActivity.class);
         startActivity(intent);
     }
 }

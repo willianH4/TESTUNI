@@ -12,27 +12,34 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.unipay.uni.R;
 import com.unipay.uni.models.CheckPhoneNumber;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
+import java.util.List;
 
-public class ListaContactosAdapter extends RecyclerView.Adapter<ListaContactosAdapter.ContactoViewHolder> {
+public class ListaContactosAdapter extends RecyclerView.Adapter<com.unipay.uni.ui.adapters.ListaContactosAdapter.ContactoViewHolder> {
 
-    ArrayList<CheckPhoneNumber> listaContactos;
+    private Context mCtx;
+    List<CheckPhoneNumber> listaContactos;
 
-    public ListaContactosAdapter(Context context, ArrayList<CheckPhoneNumber> listaContactos){
+    public ListaContactosAdapter(Context mCtx, ArrayList<CheckPhoneNumber> listaContactos){
+        this.mCtx = mCtx;
         this.listaContactos = listaContactos;
     }
 
     @NonNull
     @Override
     public ListaContactosAdapter.ContactoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.contacto, null, false);
+        LayoutInflater inflater = LayoutInflater.from(mCtx);
+        View view = inflater.inflate(R.layout.contacto, null);
         return new ContactoViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListaContactosAdapter.ContactoViewHolder holder, int position) {
-        holder.tvNombre.setText(listaContactos.get(position).getNombre());
-        holder.tvTelefono.setText(listaContactos.get(position).getTelefono());
+    public void onBindViewHolder(ContactoViewHolder holder, int position) {
+        CheckPhoneNumber phone = listaContactos.get(position);
+        holder.tvNombre.setText(phone.getContactName());
+        holder.tvTelefono.setText(phone.getPhoneNumber());
     }
 
     @Override
@@ -40,14 +47,19 @@ public class ListaContactosAdapter extends RecyclerView.Adapter<ListaContactosAd
         return listaContactos.size();
     }
 
-    public class ContactoViewHolder extends RecyclerView.ViewHolder{
+    public static class ContactoViewHolder extends RecyclerView.ViewHolder{
 
         TextView tvNombre, tvTelefono;
 
-        public ContactoViewHolder(@NonNull View itemView) {
+        public ContactoViewHolder(View itemView) {
             super(itemView);
             tvNombre = itemView.findViewById(R.id.tvNombre);
             tvTelefono = itemView.findViewById(R.id.tvTelefono);
         }
+    }
+
+    @Override
+    public void onAttachedToRecyclerView(@NotNull RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
     }
 }

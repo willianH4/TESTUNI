@@ -8,8 +8,8 @@
     tools:context=".SplashScreen">
 
     <ImageView
-        android:layout_width="@dimen/widthImgSplash"
-        android:layout_height="@dimen/heightImgSplash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:src="@mipmap/ic_uni"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"

@@ -1,4 +1,4 @@
-package com.unipay.uni.ui;
+package com.unipay.uni.ui.permisos;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,10 +11,13 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.unipay.uni.MainActivity;
 import com.unipay.uni.R;
+import com.unipay.uni.ui.resumen.ResumenUnipay;
 
 public class OtorgarPermisos extends AppCompatActivity {
 
@@ -26,8 +29,27 @@ public class OtorgarPermisos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otorgar_permisos);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_back_24));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.azulito));
+        toolbar.setTitleMargin(0, 0, 0, 0);
+        setSupportActionBar(toolbar);
+
+        //y esto para pantalla completa (oculta incluso la barra de estado)
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
+        //y esto para pantalla completa (oculta incluso la barra de estado)
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                regresar();
+            }
+        });
 
         btnAceptar = findViewById(R.id.btnAceptar);
 
@@ -54,6 +76,11 @@ public class OtorgarPermisos extends AppCompatActivity {
 
     private void verTransacciones(){
         Intent intent = new Intent(OtorgarPermisos.this, ResumenUnipay.class);
+        startActivity(intent);
+    }
+
+    private void regresar() {
+        Intent intent = new Intent(OtorgarPermisos.this, MainActivity.class);
         startActivity(intent);
     }
 }

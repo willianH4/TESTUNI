@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".ui.contactos.RecyclerviewContactos">
+    tools:context=".ui.transferencias.DestinatarioFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvContactos"

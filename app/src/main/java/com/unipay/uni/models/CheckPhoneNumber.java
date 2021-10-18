@@ -1,30 +1,29 @@
 package com.unipay.uni.models;
-
 public class CheckPhoneNumber {
-    public String nombre;
-    public String telefono;
+    public String contactName;
+    public String phoneNumber;
 
     public CheckPhoneNumber() {
     }
 
-    public CheckPhoneNumber(String nombre, String telefono) {
-        this.nombre = nombre;
-        this.telefono = telefono;
+    public CheckPhoneNumber(String contactName, String phoneNumber) {
+        this.contactName = contactName;
+        this.phoneNumber = phoneNumber;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getContactName() {
+        return contactName;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setContactName(String contactName) {
+        this.contactName = contactName;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

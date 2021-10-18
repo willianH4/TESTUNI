@@ -1,4 +1,4 @@
-package com.unipay.uni;
+package com.unipay.uni.ui.transferencias;
 
 import android.os.Bundle;
 
@@ -11,6 +11,8 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.unipay.uni.R;
 
 public class TransferirFragment extends Fragment {
 
