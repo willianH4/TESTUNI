@@ -40,5 +40,7 @@
     <dimen name="margen1P4">100dp</dimen>
     <dimen name="resumenP4">20sp</dimen>
 
+<!--    margen para la progressbar-->
+    <dimen name="progressbarAllTransacciones">75dp</dimen>
 
 </resources>

@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.unipay.uni.MainActivity;
 import com.unipay.uni.R;
 import com.unipay.uni.ui.resumen.ResumenUnipay;
+import com.unipay.uni.ui.transferencias.Transfiere;
 
 public class OtorgarPermisos extends AppCompatActivity {
 
@@ -75,7 +76,7 @@ public class OtorgarPermisos extends AppCompatActivity {
     }
 
     private void verTransacciones(){
-        Intent intent = new Intent(OtorgarPermisos.this, ResumenUnipay.class);
+        Intent intent = new Intent(OtorgarPermisos.this, Transfiere.class);
         startActivity(intent);
     }
 

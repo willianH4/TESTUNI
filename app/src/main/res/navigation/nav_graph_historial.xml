@@ -3,24 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_historial"
-    app:startDestination="@id/historialTransacciones2">
+    app:startDestination="@id/inicio_ver_historial">
 
-    <fragment
-        android:id="@+id/historialTransacciones2"
-        android:name="com.unipay.uni.ui.resumen.HistorialTransacciones"
-        android:label="fragment_historial_transacciones"
-        tools:layout="@layout/fragment_historial_transacciones" >
-        <action
-            android:id="@+id/action_historialTransacciones2_to_inicio_ver_historial"
-            app:destination="@id/inicio_ver_historial" />
-    </fragment>
     <fragment
         android:id="@+id/inicio_ver_historial"
         android:name="com.unipay.uni.InicioVerHistorial"
         android:label="fragment_inicio_ver_historial"
         tools:layout="@layout/fragment_inicio_ver_historial" >
         <action
-            android:id="@+id/action_inicio_ver_historial_to_historialTransacciones2"
-            app:destination="@id/historialTransacciones2" />
+            android:id="@+id/action_inicio_ver_historial_to_todasTransacciones"
+            app:destination="@id/todasTransacciones" />
+    </fragment>
+    <fragment
+        android:id="@+id/todasTransacciones"
+        android:name="com.unipay.uni.ui.resumen.TodasTransacciones"
+        android:label="fragment_todas_transacciones"
+        tools:layout="@layout/fragment_todas_transacciones" >
+        <action
+            android:id="@+id/action_todasTransacciones_to_inicio_ver_historial"
+            app:destination="@id/inicio_ver_historial" />
     </fragment>
 </navigation>

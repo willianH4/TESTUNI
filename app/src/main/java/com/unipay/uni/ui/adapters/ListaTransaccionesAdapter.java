@@ -18,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListaTransaccionesAdapter extends RecyclerView.Adapter<com.unipay.uni.ui.adapters.ListaTransaccionesAdapter.TransaccionHolder>{
+public class ListaTransaccionesAdapter extends RecyclerView.Adapter<ListaTransaccionesAdapter.TransaccionHolder>{
 
 
     private Context mCtx;
@@ -43,7 +43,7 @@ public class ListaTransaccionesAdapter extends RecyclerView.Adapter<com.unipay.u
         holder.tvDestino.setText(transac.getPhoneNumberTo());
         holder.tvConcepto.setText(transac.getConcept());
         holder.tvFecha.setText(transac.getCreateDate());
-        holder.tvMonto.setText((int) transac.getBalance());
+        holder.tvMonto.setText(transac.getBalance());
     }
 
     @Override

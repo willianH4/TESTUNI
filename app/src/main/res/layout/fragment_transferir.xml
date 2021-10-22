@@ -101,6 +101,4 @@
     </LinearLayout>
     </ScrollView>
 
-    <include layout="@layout/floating_action_button"/>
-
 </RelativeLayout>

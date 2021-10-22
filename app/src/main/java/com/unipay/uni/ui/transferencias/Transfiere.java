@@ -10,7 +10,11 @@ import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -20,6 +24,12 @@ import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.google.zxing.BinaryBitmap;
+import com.google.zxing.MultiFormatReader;
+import com.google.zxing.NotFoundException;
+import com.google.zxing.RGBLuminanceSource;
+import com.google.zxing.Result;
+import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import com.unipay.uni.MainActivity;
@@ -28,6 +38,8 @@ import com.unipay.uni.ui.adapters.ViewPagerFragmentAdapter;
 import com.unipay.uni.ui.transferencias.DestinatarioFragment;
 import com.unipay.uni.utilidades.TabLayoutUtils;
 
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class Transfiere extends AppCompatActivity{
@@ -54,6 +66,15 @@ public class Transfiere extends AppCompatActivity{
         DestinatarioFragment contactos = new DestinatarioFragment();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transfiere);
+
+        Intent pickIntent = new Intent(Intent.ACTION_PICK);
+        pickIntent.setDataAndType( android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+        startActivityForResult(pickIntent, 111);
+
+        menu_fab = findViewById(R.id.menu_fab);
+        leerQr = findViewById(R.id.leerQr);
+        qrSinMonto = findViewById(R.id.qrSinMonto);
+        qrMonto = findViewById(R.id.qrMonto);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_back_24));
@@ -111,15 +132,19 @@ public class Transfiere extends AppCompatActivity{
             }
         });
 
+        leerQr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent pickIntent = new Intent(Intent.ACTION_PICK);
+//                pickIntent.setDataAndType( android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+//                startActivityForResult(pickIntent, 111);
+                scanearQR();
+            }
+        });
+
         generarTab();
         // Deshabilita evento click de los tab
         deshabilitarTab();
-
-        // No funcional
-        menu_fab = findViewById(R.id.menu_fab);
-        leerQr = findViewById(R.id.leerQr);
-        qrSinMonto = findViewById(R.id.qrSinMonto);
-        qrMonto = findViewById(R.id.qrMonto);
     }
 
     private void deshabilitarTab() {
@@ -144,7 +169,7 @@ public class Transfiere extends AppCompatActivity{
     private void scanearQR() {
         IntentIntegrator integrator = new IntentIntegrator(Transfiere.this);
         integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE); //lee todos los tipos de codigos
-        integrator.setPrompt("Lector - CQR");
+        integrator.setPrompt("Lector - QR");
         integrator.setCameraId(0);
         integrator.setOrientationLocked(false);
         integrator.setPrompt("Escanea tu codigo QR");
@@ -154,16 +179,58 @@ public class Transfiere extends AppCompatActivity{
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        super.onActivityResult(requestCode, resultCode, data);
 
-        if (result != null) {
-            if (result.getContents() == null) {
-                Toast.makeText(this, "Lectura cancelada", Toast.LENGTH_SHORT).show();
-            }else{
-                Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
-            }
-        }else{
-            super.onActivityResult(requestCode, resultCode, data);
+//        if (result != null) {
+//            if (result.getContents() == null) {
+//                Toast.makeText(this, "Lectura cancelada", Toast.LENGTH_SHORT).show();
+//            }else{
+//                Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
+//            }
+//        }else{
+//            super.onActivityResult(requestCode, resultCode, data);
+//        }
+
+        switch (requestCode) {
+            //definir aca los demas casos
+            case 111:
+                if(data == null || data.getData()==null) {
+                    Log.e("TAG", "La uri es nula, probablemente dio click en el boton atras.");
+                    return;
+                }
+                Uri uri = data.getData();
+                try
+                {
+                    InputStream inputStream = getContentResolver().openInputStream(uri);
+                    Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+                    if (bitmap == null)
+                    {
+                        Log.e("TAG", "uri no es un bitmap," + uri.toString());
+                        return;
+                    }
+                    int width = bitmap.getWidth(), height = bitmap.getHeight();
+                    int[] pixels = new int[width * height];
+                    bitmap.getPixels(pixels, 0, width, 0, 0, width, height);
+                    bitmap.recycle();
+                    bitmap = null;
+                    RGBLuminanceSource source = new RGBLuminanceSource(width, height, pixels);
+                    BinaryBitmap bBitmap = new BinaryBitmap(new HybridBinarizer(source));
+                    MultiFormatReader reader = new MultiFormatReader();
+                    try
+                    {
+                        Result result = reader.decode(bBitmap);
+                        Toast.makeText(this, "El contenido del QR es: " + result.getText(), Toast.LENGTH_SHORT).show();
+                    }
+                    catch (NotFoundException e)
+                    {
+                        Log.e("TAG", "excepcion decodificando imagen", e);
+                    }
+                }
+                catch (FileNotFoundException e)
+                {
+                    Log.e("TAG", "No se puede abrir el archivo" + uri.toString(), e);
+                }
+                break;
         }
     }
 

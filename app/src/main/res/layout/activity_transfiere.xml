@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -39,18 +39,17 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_margin="20dp">
+        android:layout_margin="@dimen/veinteDP">
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayoutMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cuarentayochoDP"
             tools:ignore="SpeakableTextPresentCheck">
         </com.google.android.material.tabs.TabLayout>
 
@@ -59,9 +58,55 @@
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/pager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            />
 
     </LinearLayout>
 
+        <!-- Inicia bloque para menu en button -->
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/menu_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            app:menu_icon="@drawable/qr_code"
+            app:menu_colorNormal="@android:color/transparent"
+            app:menu_labels_style="@style/custom_floating_button"
+            >
 
-</LinearLayout>
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/qrMonto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/qr_code_gen"
+                app:borderWidth="0dp"
+                app:fab_label="Generar QR con monto"
+                app:fab_size="mini"
+                app:fab_colorNormal="@color/white"
+                />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/qrSinMonto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/qr_code_gen"
+                app:borderWidth="0dp"
+                app:fab_label="Generar QR"
+                app:fab_size="mini"
+                app:fab_colorNormal="@color/white"
+                />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/leerQr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/qr_code_read"
+                app:borderWidth="0dp"
+                app:fab_label="Leer"
+                app:fab_size="mini"
+                app:fab_colorNormal="@color/white"
+                />
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

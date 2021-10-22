@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_marginTop="4dp"
         app:cardCornerRadius="5dp"
+        android:layout_margin="@dimen/veinteDP"
         android:layout_height="75dp">
 
         <LinearLayout

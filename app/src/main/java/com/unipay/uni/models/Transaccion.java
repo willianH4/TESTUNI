@@ -6,9 +6,9 @@ public class Transaccion {
     public String phoneNumberTo;
     public String concept;
     public String createDate;
-    public double balance;
+    public String balance;
 
-    public Transaccion(String phoneNumberFrom, String phoneNumberTo, String concept, double balance, String createDate) {
+    public Transaccion(String phoneNumberFrom, String phoneNumberTo, String concept, String balance, String createDate) {
         this.phoneNumberFrom = phoneNumberFrom;
         this.phoneNumberTo = phoneNumberTo;
         this.concept = concept;
@@ -44,11 +44,11 @@ public class Transaccion {
         this.concept = concept;
     }
 
-    public double getBalance() {
+    public String getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    public void setBalance(String balance) {
         this.balance = balance;
     }
 

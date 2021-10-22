@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -22,7 +23,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.gson.*;
+import com.github.clans.fab.FloatingActionButton;
+import com.github.clans.fab.FloatingActionMenu;
 import com.unipay.uni.R;
 import com.unipay.uni.models.CheckPhoneNumber;
 import com.unipay.uni.ui.adapters.ListaContactosAdapter;
@@ -36,17 +38,16 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 
-public class DestinatarioFragment extends Fragment {
+public class DestinatarioFragment extends Fragment implements SearchView.OnQueryTextListener {
 
-    CheckPhoneNumber number = new CheckPhoneNumber();
+    final CheckPhoneNumber number = new CheckPhoneNumber();
     ArrayList<String> lista = null;
     ArrayList<CheckPhoneNumber> contactosLocales = new ArrayList<CheckPhoneNumber>();
     ArrayList<CheckPhoneNumber> listaContactos;
-    final JSONArray array=new JSONArray();
-//    final JSONObject array1=new JSONObject();
-//    Gson gson = new Gson();
-//    String jsonArray = gson.toJson(number);
+    JSONArray array=new JSONArray();
+    JSONObject jsonObject = new JSONObject();
 
+    private SearchView svBuscar;
     private RecyclerView recyclerView;
     private ListaContactosAdapter contactosAdapter;
 
@@ -60,9 +61,12 @@ public class DestinatarioFragment extends Fragment {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_destinatario, container, false);
 
+        svBuscar = root.findViewById(R.id.svBuscar);
         recyclerView = root.findViewById(R.id.rvContactos);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+//        svBuscar.setOnQueryTextListener(this);
 
         agregarContactosLocales();
         recibirContacts();
@@ -99,14 +103,11 @@ public class DestinatarioFragment extends Fragment {
             }
             array.put(obj);
         }
-        Log.i("Nuevo json:::", String.valueOf(array));
+        Log.i("Datos en el array:", String.valueOf(array));
     }
-
 
     private void recibirContacts(){
         RequestQueue queue = Volley.newRequestQueue(getContext());
-        Log.i("posicion 1:", String.valueOf(contactosLocales.get(0)));
-        Log.i("Data del arreglo", String.valueOf(contactosLocales));
 
         listaContactos = new ArrayList<CheckPhoneNumber>();
         lista = new ArrayList<String>();
@@ -120,9 +121,9 @@ public class DestinatarioFragment extends Fragment {
 
                     CheckPhoneNumber objContactos = null;
                     for (int i = 0; i < respuestaJSOn.length(); i++){
-                        JSONObject contactos = respuestaJSOn.getJSONObject(i);
-                        String phoneNumber = contactos.getString("phoneNumber");
-                        String contactName = contactos.getString("contactName");
+                        JSONObject msg = respuestaJSOn.getJSONObject(i);
+                        String phoneNumber = msg.getString("phoneNumber");
+                        String contactName = msg.getString("contactName");
 
                         objContactos = new CheckPhoneNumber(phoneNumber, contactName);
 
@@ -158,7 +159,6 @@ public class DestinatarioFragment extends Fragment {
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
-//        MySingleton.getInstance(getContext()).addToRequestQueue(request);
         queue.add(request);
     }
 
@@ -168,5 +168,16 @@ public class DestinatarioFragment extends Fragment {
          * que no tienen el servicio UNI
          */
 
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String s) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String s) {
+        contactosAdapter.filtrado(s);
+        return false;
     }
 }
