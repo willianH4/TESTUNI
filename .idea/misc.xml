@@ -12,6 +12,35 @@
         <entry key="..\:/Users/W. Hernandez/Desktop/Android/UNI/app/src/main/res/menu/top_app_bar.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/W. Hernandez/Desktop/Android/UNI_SHARE/app/src/main/res/layout/fragment_todas_transacciones.xml" value="0.1" />
         <entry key="..\:/Users/W. Hernandez/Desktop/Android/UNI_SHARE/app/src/main/res/layout/historial_transacciones.xml" value="0.1" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/activity_cambiar_alias.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/activity_cuenta_origen.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/activity_datos_usuario.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/activity_enrolla_uni.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/activity_mi_codigo_qr.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/activity_mi_codigo_qr_con_monto.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/activity_otorgar_permisos.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/activity_resumen_transaccion.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/activity_resumen_unipay.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/activity_splash_screen.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/activity_transferir.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/activity_transfiere.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/contacto.xml" value="0.1" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/custom_confirmacion.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/custom_datos_qr_leido.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/custom_detalle_transaccion.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/custom_info.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/custom_permission_read_contacts.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/custom_qr_no_detectado.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/custom_transaccion_efectuada.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/floating_action_button.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/fragment_destinatario.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/fragment_inicio_ver_historial.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/fragment_recyclerview_contactos.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/fragment_resumen_transferencia.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/fragment_todas_transacciones.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/fragment_transferir.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/W. Hernandez/Desktop/Kotlin/TESTUNI/app/src/main/res/layout/historial_transacciones.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/drawable/boton_comenzar.xml" value="1.0071428571428571" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/drawable/boton_continuar.xml" value="0.2203125" />
         <entry key="..\:/Users/whernandez/AndroidStudioProjects/UNI/app/src/main/res/drawable/estilo_editext.xml" value="0.14" />

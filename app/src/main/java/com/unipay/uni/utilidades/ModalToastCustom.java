@@ -5,11 +5,10 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-//import android.support.v7.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.unipay.uni.R;
 

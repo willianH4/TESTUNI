@@ -31,19 +31,6 @@
             android:name=".ui.transferencias.Transfiere"
             android:exported="true" />
         <activity
-            android:name=".ui.usuario.DatosUsuario"
-            android:exported="true" />
-        <activity
-            android:name=".ui.principal.CambiarAlias"
-            android:exported="true"
-            android:parentActivityName=".MainActivity">
-
-            <!-- The meta-data tag is required if you support API level 15 and lower -->
-            <meta-data
-                android:name="android.support.CambiarAlias"
-                android:value=".MainActivity" />
-        </activity>
-        <activity
             android:name=".ui.resumen.ResumenTransaccion"
             android:exported="true"
             android:parentActivityName=".MainActivity">
@@ -64,26 +51,6 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".ui.principal.CuentaOrigen"
-            android:exported="true"
-            android:parentActivityName=".MainActivity">
-
-            <!-- The meta-data tag is required if you support API level 15 and lower -->
-            <meta-data
-                android:name="android.support.CuentaOrigen"
-                android:value=".MainActivity" />
-        </activity>
-        <activity
-            android:name=".ui.resumen.ResumenUnipay"
-            android:exported="true"
-            android:parentActivityName=".MainActivity">
-
-            <!-- The meta-data tag is required if you support API level 15 and lower -->
-            <meta-data
-                android:name="android.support.ResumenUnipay"
-                android:value=".MainActivity" />
-        </activity>
-        <activity
             android:name=".ui.permisos.OtorgarPermisos"
             android:exported="true"
             android:parentActivityName=".MainActivity">
@@ -91,16 +58,6 @@
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.OtorgarPermisos"
-                android:value=".MainActivity" />
-        </activity>
-        <activity
-            android:name=".ui.permisos.EnrollaUni"
-            android:exported="true"
-            android:parentActivityName=".MainActivity">
-
-            <!-- The meta-data tag is required if you support API level 15 and lower -->
-            <meta-data
-                android:name="android.support.EnrollaUni"
                 android:value=".MainActivity" />
         </activity>
         <activity

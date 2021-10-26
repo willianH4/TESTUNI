@@ -26,7 +26,6 @@
                 android:id="@+id/imgImagen1"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/alturaImagen1"
-                android:src="@drawable/logoedit"
                 android:contentDescription="@string/imgConten1"
                 />
 
@@ -34,7 +33,6 @@
                 android:id="@+id/imgImagen2"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/cienDP"
-                android:src="@drawable/logobanco_1"
                 android:contentDescription="@string/imgConten1"
                 />
 

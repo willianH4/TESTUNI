@@ -1,13 +1,7 @@
 package com.unipay.uni.ui.transferencias;
 
-import static androidx.appcompat.widget.Toolbar.*;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-import androidx.viewpager2.widget.MarginPageTransformer;
-import androidx.viewpager2.widget.ViewPager2;
+import static androidx.appcompat.widget.Toolbar.OnClickListener;
+import static androidx.appcompat.widget.Toolbar.OnMenuItemClickListener;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -19,6 +13,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.MarginPageTransformer;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
@@ -35,20 +36,21 @@ import com.google.zxing.integration.android.IntentResult;
 import com.unipay.uni.MainActivity;
 import com.unipay.uni.R;
 import com.unipay.uni.ui.adapters.ViewPagerFragmentAdapter;
-import com.unipay.uni.ui.transferencias.DestinatarioFragment;
+import com.unipay.uni.ui.qr.MiCodigoQr;
+import com.unipay.uni.ui.qr.MiCodigoQrConMonto;
 import com.unipay.uni.utilidades.TabLayoutUtils;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-public class Transfiere extends AppCompatActivity{
+public class Transfiere extends AppCompatActivity implements OnClickListener {
 
     private ViewPager2 myViewPager2;
     private ViewPagerFragmentAdapter myAdapter;
     private  TabLayout tabLayout;
     private FloatingActionMenu menu_fab;
-    private FloatingActionButton leerQr, qrSinMonto, qrMonto;
+    private FloatingActionButton leerQr, qrSinMonto, qrMonto, leerQrDeGaleria;
 
     /* arreglo para el texto
      * o encabezados de cada tab
@@ -67,12 +69,13 @@ public class Transfiere extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transfiere);
 
-        Intent pickIntent = new Intent(Intent.ACTION_PICK);
-        pickIntent.setDataAndType( android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
-        startActivityForResult(pickIntent, 111);
+//        Intent pickIntent = new Intent(Intent.ACTION_PICK);
+//        pickIntent.setDataAndType( android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+//        startActivityForResult(pickIntent, 111);
 
         menu_fab = findViewById(R.id.menu_fab);
         leerQr = findViewById(R.id.leerQr);
+        leerQrDeGaleria = findViewById(R.id.leerQrDeGaleria);
         qrSinMonto = findViewById(R.id.qrSinMonto);
         qrMonto = findViewById(R.id.qrMonto);
 
@@ -91,7 +94,7 @@ public class Transfiere extends AppCompatActivity{
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        toolbar.setNavigationOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 regresar();
@@ -119,7 +122,6 @@ public class Transfiere extends AppCompatActivity{
         arrayList.add(new ResumenTransferenciaFragment());
 
         myAdapter = new ViewPagerFragmentAdapter(getSupportFragmentManager(), getLifecycle());
-//         set Orientation in your ViewPager2
         myViewPager2.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
         myViewPager2.setAdapter(myAdapter);
         myViewPager2.setPageTransformer(new MarginPageTransformer(1500));
@@ -132,19 +134,20 @@ public class Transfiere extends AppCompatActivity{
             }
         });
 
-        leerQr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Intent pickIntent = new Intent(Intent.ACTION_PICK);
-//                pickIntent.setDataAndType( android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
-//                startActivityForResult(pickIntent, 111);
-                scanearQR();
-            }
-        });
+        leerQr.setOnClickListener(this);
+        leerQrDeGaleria.setOnClickListener(this);
+        qrMonto.setOnClickListener(this);
+        qrSinMonto.setOnClickListener(this);
 
         generarTab();
         // Deshabilita evento click de los tab
         deshabilitarTab();
+    }
+
+    private void scanearQRDeGaleria() {
+        Intent pickIntent = new Intent(Intent.ACTION_PICK);
+        pickIntent.setDataAndType( android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+        startActivityForResult(pickIntent, 111);
     }
 
     private void deshabilitarTab() {
@@ -179,17 +182,7 @@ public class Transfiere extends AppCompatActivity{
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-//        if (result != null) {
-//            if (result.getContents() == null) {
-//                Toast.makeText(this, "Lectura cancelada", Toast.LENGTH_SHORT).show();
-//            }else{
-//                Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
-//            }
-//        }else{
-//            super.onActivityResult(requestCode, resultCode, data);
-//        }
+        super.onActivityResult(requestCode, 1, data);
 
         switch (requestCode) {
             //definir aca los demas casos
@@ -232,6 +225,20 @@ public class Transfiere extends AppCompatActivity{
                 }
                 break;
         }
+
+        switch (resultCode){
+            case 1:
+                IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+                if(result != null) {
+                    if(result.getContents() == null) {
+                        Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(this, "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show();
+                    }
+                } else {
+                    super.onActivityResult(requestCode, resultCode, data);
+                }
+        }
     }
 
     private void regresar() {
@@ -239,4 +246,24 @@ public class Transfiere extends AppCompatActivity{
         startActivity(intent);
     }
 
+    // Metodo con todos los eventos click de botones en la activity
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.qrMonto:
+                Intent intent = new Intent(Transfiere.this, MiCodigoQrConMonto.class);
+                startActivity(intent);
+                break;
+            case R.id.qrSinMonto:
+                Intent qr = new Intent(Transfiere.this, MiCodigoQr.class);
+                startActivity(qr);
+                break;
+            case R.id.leerQrDeGaleria:
+                scanearQRDeGaleria();
+                break;
+            case R.id.leerQr:
+                scanearQR();
+                break;
+        }
+    }
 }

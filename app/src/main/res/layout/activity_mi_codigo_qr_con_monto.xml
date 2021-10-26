@@ -76,7 +76,7 @@
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
-                android:id="@+id/btnAccept"
+                android:id="@+id/btnGenerar"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/etMonto"

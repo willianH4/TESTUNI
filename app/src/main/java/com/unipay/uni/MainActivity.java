@@ -6,9 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.unipay.uni.ui.permisos.EnrollaUni;
 import com.unipay.uni.ui.permisos.OtorgarPermisos;
-import com.unipay.uni.ui.transferencias.Transfiere;
 
 public class MainActivity extends Activity {
 

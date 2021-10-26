@@ -1,6 +1,5 @@
 package com.unipay.uni.ui.adapters;
 
-import java.util.ArrayList;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -10,6 +9,8 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.unipay.uni.ui.transferencias.DestinatarioFragment;
 import com.unipay.uni.ui.transferencias.ResumenTransferenciaFragment;
 import com.unipay.uni.ui.transferencias.TransferirFragment;
+
+import java.util.ArrayList;
 
 public class ViewPagerFragmentAdapter extends FragmentStateAdapter {
 

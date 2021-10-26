@@ -3,33 +3,30 @@ package com.unipay.uni.ui.transferencias;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.SearchView;
+import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.github.clans.fab.FloatingActionButton;
-import com.github.clans.fab.FloatingActionMenu;
 import com.unipay.uni.R;
 import com.unipay.uni.models.CheckPhoneNumber;
 import com.unipay.uni.ui.adapters.ListaContactosAdapter;
-import com.unipay.uni.utilidades.MySingleton;
 import com.unipay.uni.utilidades.Settings_VAR;
+import com.unipay.uni.volley.JsonArrayRequestCustom;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -40,13 +37,14 @@ import java.util.ArrayList;
 
 public class DestinatarioFragment extends Fragment implements SearchView.OnQueryTextListener {
 
-    final CheckPhoneNumber number = new CheckPhoneNumber();
     ArrayList<String> lista = null;
     ArrayList<CheckPhoneNumber> contactosLocales = new ArrayList<CheckPhoneNumber>();
     ArrayList<CheckPhoneNumber> listaContactos;
+    ArrayList<CheckPhoneNumber> contactosTotales = new ArrayList<CheckPhoneNumber>();
+    ArrayList<CheckPhoneNumber> contactosSerializados = new ArrayList<CheckPhoneNumber>();
     JSONArray array=new JSONArray();
-    JSONObject jsonObject = new JSONObject();
 
+    private ProgressBar progressBar;
     private SearchView svBuscar;
     private RecyclerView recyclerView;
     private ListaContactosAdapter contactosAdapter;
@@ -61,15 +59,17 @@ public class DestinatarioFragment extends Fragment implements SearchView.OnQuery
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_destinatario, container, false);
 
+        progressBar = root.findViewById(R.id.progress);
         svBuscar = root.findViewById(R.id.svBuscar);
         recyclerView = root.findViewById(R.id.rvContactos);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-//        svBuscar.setOnQueryTextListener(this);
+        svBuscar.setOnQueryTextListener(this);
 
         agregarContactosLocales();
-        recibirContacts();
+        recibirContactosAPI();
+        compararListasContactos();
         return root;
     }
 
@@ -83,8 +83,8 @@ public class DestinatarioFragment extends Fragment implements SearchView.OnQuery
         int indexName = people.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME);
         int indexNumber = people.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
 
-        Log.i("Numero", String.valueOf(indexNumber));
         Log.i("Nombre", String.valueOf(indexName));
+        Log.i("Numero", String.valueOf(indexNumber));
         if(people.moveToFirst()) {
             do {
                 String nuevoNumero = people.getString(indexNumber).replace(" ", "-");
@@ -103,29 +103,35 @@ public class DestinatarioFragment extends Fragment implements SearchView.OnQuery
             }
             array.put(obj);
         }
-        Log.i("Datos en el array:", String.valueOf(array));
+        Log.i("Contactos en Json", String.valueOf(array));
     }
 
-    private void recibirContacts(){
+    private void recibirContactosAPI() {
         RequestQueue queue = Volley.newRequestQueue(getContext());
 
         listaContactos = new ArrayList<CheckPhoneNumber>();
         lista = new ArrayList<String>();
+        progressBar.setVisibility(View.VISIBLE);
         String urlConsultaUsuarios = Settings_VAR.URL_CheckPhoneNumbers;
-        JsonArrayRequest request = new JsonArrayRequest(Request.Method.POST, urlConsultaUsuarios, array, new Response.Listener<JSONArray>() {
+        JsonArrayRequestCustom request = new JsonArrayRequestCustom(
+                Request.Method.POST,
+                urlConsultaUsuarios,
+                array,
+                new Response.Listener<JSONObject>() {
             @Override
-            public void onResponse(JSONArray response) {
+            public void onResponse(JSONObject response) {
                 try {
-                    JSONArray respuestaJSOn = new JSONArray(response);
+                    response = response.getJSONObject("response");
+                    JSONArray respuestaJSOn = response.getJSONArray("msg");
                     int totalEnct = respuestaJSOn.length();
 
                     CheckPhoneNumber objContactos = null;
-                    for (int i = 0; i < respuestaJSOn.length(); i++){
+                    for (int i = 0; i < respuestaJSOn.length(); i++) {
                         JSONObject msg = respuestaJSOn.getJSONObject(i);
                         String phoneNumber = msg.getString("phoneNumber");
                         String contactName = msg.getString("contactName");
 
-                        objContactos = new CheckPhoneNumber(phoneNumber, contactName);
+                        objContactos = new CheckPhoneNumber(contactName, phoneNumber);
 
                         listaContactos.add(objContactos);
 
@@ -133,22 +139,24 @@ public class DestinatarioFragment extends Fragment implements SearchView.OnQuery
 
                         recyclerView.setAdapter(contactosAdapter);
 
-                        Log.i("Telefono:    ", String.valueOf(objContactos.getPhoneNumber()));
-                        Log.i("Nombre:    ", String.valueOf(objContactos.getContactName()));
+//                        Log.i("Nombre:    ", String.valueOf(objContactos.getContactName()));
+//                        Log.i("Telefono:    ", String.valueOf(objContactos.getPhoneNumber()));
 
                     }
+                    progressBar.setVisibility(View.INVISIBLE);
+                    Log.i("Respuesta json ", response.toString());
 
-                    Log.i("Respuesta json ",response.toString());
-
-                } catch (JSONException ex){
+                } catch (JSONException ex) {
                     String none = ex.toString();
-                    Log.i("NO consulta ***** ", none);
+                    Log.i("Error tipo ***** ", none);
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
                 String err = volleyError.toString();
+                Toast.makeText(getContext(), "Error al cargar los datos", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.INVISIBLE);
                 Log.i("No se pudo **********", err);
             }
         });
@@ -162,12 +170,17 @@ public class DestinatarioFragment extends Fragment implements SearchView.OnQuery
         queue.add(request);
     }
 
-    private void compararContactos(){
-        /**
-         * metodo comparador de arreglos devuelve un arreglo con los datos
-         * que no tienen el servicio UNI
-         */
-
+    private void compararListasContactos(){
+//        for (CheckPhoneNumber local : contactosLocales) {
+//            for (CheckPhoneNumber api : listaContactos) {
+//                if (!local.getPhoneNumber().equalsIgnoreCase(api.getPhoneNumber())) {
+//                    contactosSerializados.add(local);
+//                }
+//            }
+//        }
+        Log.i("Contactos api", String.valueOf(listaContactos));
+        Log.i("Contactos locales", String.valueOf(contactosLocales));
+        Log.i("cantidad", String.valueOf(listaContactos.size()));
     }
 
     @Override

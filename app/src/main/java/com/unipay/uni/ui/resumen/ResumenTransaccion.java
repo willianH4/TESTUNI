@@ -1,8 +1,8 @@
 package com.unipay.uni.ui.resumen;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.unipay.uni.R;
 

@@ -102,7 +102,18 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/qr_code_read"
                 app:borderWidth="0dp"
-                app:fab_label="Leer"
+                app:fab_label="Scanear con camara"
+                app:fab_size="mini"
+                app:fab_colorNormal="@color/white"
+                />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/leerQrDeGaleria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/qr_code_read"
+                app:borderWidth="0dp"
+                app:fab_label="Scanear de galeria"
                 app:fab_size="mini"
                 app:fab_colorNormal="@color/white"
                 />

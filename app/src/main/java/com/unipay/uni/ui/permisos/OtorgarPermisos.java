@@ -1,10 +1,5 @@
 package com.unipay.uni.ui.permisos;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -15,9 +10,13 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+
 import com.unipay.uni.MainActivity;
 import com.unipay.uni.R;
-import com.unipay.uni.ui.resumen.ResumenUnipay;
 import com.unipay.uni.ui.transferencias.Transfiere;
 
 public class OtorgarPermisos extends AppCompatActivity {
